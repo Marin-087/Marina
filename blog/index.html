@@ -2,74 +2,123 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content ="width=device-width, initial-scale=1.0">
-    <meta name="authors"  content = " Marina Moraes"> 
-    <title>Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="authors" content=" Marina Moraes">
+  <title>Blog</title>
 
 </head>
 
 <body>
+  <h1> O Tesouro Perdido</h1>
+  <p>Um tesouro perdido há séculos foi encontrado na ilha de Cyberspace.
+    A expedição, liderada pela Dra. Ada Lovelace, encontrou artefatos que
+    revelam a história de um povo antigo.</p>
 
-    <h1> O Tesouro Perdido</h1>
-    <p>Um tesouro perdido há séculos foi encontrado na ilha de Cyberspace.
-        A expedição, liderada pela Dra. Ada Lovelace, encontrou artefatos que
-        revelam a história de um povo antigo.</p>
+  <p> Localização</p>
+  <ul>
+    <li> Monte Sintaxe, 12.</li>
+  </ul>
+  <img  
+    src="https://store-images.s-microsoft.com/image/apps.27117.68075501478625282.02e258f6-fed1-426c-9778-bcc9be92d9b5.da0f3410-85dd-46c4-89b9-2bca66d68367?q=90&w=480&h=270"
+    alt="Imagem de Amsterdã" width="350"><br>
+  <p>Data da descoberta:</p>
+  <ul>
+    <li> 25 de setembro.</li>
+  </ul>
+  <a href="blog.html" target="_blank"> Leia mais sobre a descoberta em nosso blog.</a>
+  <br>
+  <table border="1">
+    <caption>Artefatos encontrados</caption>
+    <thead>
+      <tr>
+        <th>Categoria</th>
+        <th>Artefato</th>
+        <th>Peso (kg)</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Manuscrito</td>
+        <td>Mapa Antigo</td>
+        <td>0.8</td>
+        <td>Em avaliação</td>
+      </tr>
+      <tr>
+        <td>Manuscrito</td>
+        <td>Diário de Bordo</td>
+        <td>1.2</td>
+        <td>Analisado</td>
+      </tr>
+      <tr>
+        <td>Joalheria</td>
+        <td>Amuleto de Jade (Pequeno)</td>
+        <td>0.3</td>
+        <td>Analisado</td>
+      </tr>
+      <tr>
+        <td>Joalheria</td>
+        <td>Amuleto de Jade (Grande)</td>
+        <td>0.6</td>
+        <td>Em avaliação</td>
+      </tr>
+      <tr>
+        <td>Ferramenta</td>
+        <td>Bússola Criptografada</td>
+        <td>0.9</td>
+        <td>Pendente</td>
+      </tr>
+    <tfoot>
+      <tr>
+        <td colspan="4">Peso total: 3.8 kg</td>
+      </tr>
+    </tfoot>
 
-    <p> Localização</p>
-    <ul>
-        <li> Monte Sintaxe, 12.</li>
-    </ul>
-    <img src="https://store-images.s-microsoft.com/image/apps.27117.68075501478625282.02e258f6-fed1-426c-9778-bcc9be92d9b5.da0f3410-85dd-46c4-89b9-2bca66d68367?q=90&w=480&h=270" alt="Imagem de Amsterdã" width="350"><br>
-    <p>Data da descoberta:</p>
-    <ul>
-        <li> 25 de setembro.</li>
-    </ul>
-    <a href = "blog.html" target="_blank"> Leia mais sobre a descoberta em nosso blog.</a>
-    <table border="1">
-        <caption>Artefatos encontrados</caption>
-        <thead>
-          <tr>
-            <th>Categoria</th>
-            <th>Artefato</th>
-            <th>Peso (kg)</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Manuscrito</td>
-            <td>Mapa Antigo</td>
-            <td>0.8</td>
-            <td>Em avaliação</td>
-          </tr>
-          <tr>
-            <td>Manuscrito</td>
-            <td>Diário de Bordo</td>
-            <td>1.2</td>
-            <td>Analisado</td>
-          </tr>
-          <tr>
-            <td>Joalheria</td>
-            <td>Amuleto de Jade (Pequeno)</td>
-            <td>0.3</td>
-            <td>Analisado</td>
-          </tr>
-          <tr>
-            <td>Joalheria</td>
-            <td>Amuleto de Jade (Grande)</td>
-            <td>0.6</td>
-            <td>Em avaliação</td>
-          </tr>
-          <tr>
-            <td>Ferramenta</td>
-            <td>Bússola Criptografada</td>
-            <td>0.9</td>
-            <td>Pendente</td>
-          </tr>
-        </tbody>
-      </table>
-      
+  </table>
+  <br>
+  <table border="1" width="100" height="100">
+    <tr>
+      <td colspan="2">1</td>
+      <td rowspan="2">2</td>
+    </tr>
+    <tr>
+      <td rowspan="2">3</td>
+      <td>4</td>
+
+    </tr>
+    <tr>
+
+      <td colspan="2">5</td>
+    </tr>
+  </table>
+
+  <form action="/submit_treasure_info" method="post">
+    <fieldset>
+      <legend>Informações do Tesouro</legend>
+      <label for="researcher_name">Nome do Pesquisador:</label>
+      <input type="text" id="researcher_name" name="researcher_name" required><br><br>
+
+      <label for="discovery_date">Data da Descoberta:</label>
+      <input type="date" id="discovery_date" name="discovery_date" required><br><br>
+
+      <label for="sexo">Sexo:</label>
+      <input type="radio" id="feminino" name="sexo" value="masculino">
+      <label for="masculino">Masculino</label>
+      <input type="radio" id="feminino" name="sexo" value="feminino">
+      <label for="feminino">Feminino</label>
+      <input type="radio" id="outro" name="sexo" value="outro">
+      <label for="outro">Outro</label><br><br>
+
+      <label for="artifact_type">Tipo de Artefato:</label>
+      <select id="artifact_type" name="artifact_type">
+        <option value="manuscrito">Manuscrito</option>
+        <option value="joalheria">Joalheria</option>
+        <option value="ferramenta">Ferramenta</option>
+      </select><br><br>
+    </fieldset>
+  </form>
+
 </body>
 
 </html>
