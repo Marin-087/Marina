@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Regatas do Flamengo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Bebas Neue", Monospace; } body { background: #fff; }
+        .logoflamengo {
+            position: absolute;
+            top: 22px;
+            left: 150px;
+            z-index: 10;
+            width: 80px;
+        }
+
+        .partevermelha {
+            width: 100%;
+            background: #d2232a;
+            padding: 30px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            padding-left: 240px;
+        }
+
+        .partevermelha .esquerda, .partevermelha .direita {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .partevermelha .esquerda a { 
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 22px; 
+            background: #0000001f;   
+            padding: 4px 8px;     
+            display: inline-block;
+            border-radius: 5px;  
+            transform: scaleY(0.7)
+        }
+
+        .partevermelha .direita {
+            position: absolute;
+            right: 360px;
+        }
+
+        .partepreta {
+            width: 100%;
+            background: #000;
+            padding: 14px 40px;
+            display: flex;
+            gap: 28px;
+            color: #fff;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 15px;
+        }
+        .partepreta {
+            padding-left: 240px;
+        }
+        .partepreta a { color: #fff; text-decoration: none; }
+
+    </style>
+</head>
+<body>
+    <a href="">
+        <img class="logoflamengo"
+         src="https://logodownload.org/wp-content/uploads/2016/09/flamengo-logo-6.png"
+         alt="escudoflamengo">
+    </a>
+
+    <header class="partevermelha">
+        <div class="esquerda">
+            <a href="#">SEJA SÓCIO-TORCEDOR</a>
+            <a href="#">ACESSE O FLA-PRÊMIOS</a>
+        </div>
+        <div class="direita">
+            <a href="http://"><img src="https://www.flamengo.com.br/img/logos/logo_betano_30.png" alt="logobetano" width="90"></a>
+            <a href="http://"><img src="https://www.flamengo.com.br/img/logos/adidas.png" alt="logoadidas"></a>
+            <a href="http://"><img src="https://www.flamengo.com.br/img/logos/kwai.svg" alt="logokwai" width="15"></a>
+            <a href="http://"><img src="https://www.flamengo.com.br/img/logos/x-twitter-brands.svg" alt="logotwitter" width="15"></a>
+                
+        </div>
+    </header>
+    <nav class="partepreta">
+        <a href="#">FUTEBOL ▾</a>
+        <a href="#">INGRESSOS</a>
+        <a href="#">SÓCIO-TORCEDOR</a>
+        <a href="#">BASQUETE ▾</a>
+        <a href="#">OLÍMPICOS ▾</a>
+        <a href="#">FLA PRÊMIOS</a>
+        <a href="#">LOJA ▾</a>
+        <a href="#">CLUBE ▾</a>
+    </nav>
+
+</body>
+</html>
