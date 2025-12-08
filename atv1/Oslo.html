@@ -7,21 +7,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oslo</title>
 
+    <style>
+
+        body {
+            margin: 0;
+            padding: 60px;
+            font-family: "Georgia", serif;
+            background: #0d0d0d url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            color: #e6e2d3;
+            line-height: 1.7;
+        }
+
+        .faixa {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(#b38745, #6a4d21);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 0 0 5px;
+            letter-spacing: 3px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            margin-top: 10px;
+            width: 90px;
+            height: 3px;
+            background: #b38745;
+        }
+
+        a {
+            color: #b38745;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            color: #e6e2d3;
+            letter-spacing: 2px;
+        }
+
+        .sub {
+            opacity: 0.6;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            font-weight: 300;
+            font-size: 28px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #b38745;
+            margin-top: 8px;
+        }
+
+        .texto {
+            max-width: 800px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        img {
+            width: 700px;
+            max-width: 90%;
+            margin: 25px 0;
+            border: 2px solid rgba(179, 135, 69, 0.3);
+            border-radius: 6px;
+        }
+
+        .topo {
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 15px;
+            opacity: 0.7;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-    <h1><strong>Oslo</strong> </h1>
-    <h3><a href = "index.html">Menu</a><br></h3>
-    <h2><strong>Sobre</strong></h2>
-    <p>A capital da Noruega vai muito além do que se imagina e surpreende com sua mistura de natureza, arte e cultura urbana. Para ajudar a montar o seu roteiro, separamos o que fazer na cidade conforme o tempo disponível, além de conhecer algumas dicas extras.</p>
-    <p>Oslo encanta tanto os amantes de história quanto quem procura contato com paisagens deslumbrantes. Seus museus, parques e construções modernas criam um cenário único. A cidade é acolhedora, organizada e cheia de possibilidades.</p>
-    <p>Além de construções dos tempos medievais, como a fortaleza Akershuis, Oslo é hoje uma cidade muito bem planejada, com bairros inteiros em ótimo arquitetura contemporânea. Seus museus ocupam prédios elegantes e contam com um acervo importante, tanto dos artistas locais e escandinavos, como do restante da Europa.</p>
-    <p><strong>Fonte: <strong>
-    <a href = "https://gallasdisperati.com.br/oslo/" target="_blank">https://gallasdisperati.com.br/oslo/</a>
-    <h2><strong>Imagens</strong></h2><br>
-    <img src="https://borealisexpedicoes.com.br/wp-content/uploads/2025/06/noruega-oslo-a-noite_foap-visitnorway-com_-1024x768.jpg" alt="Imagem de Oslo" width="700"><br>
-    <img src="https://images.goway.com/production/featured_images/View-of-the-city-centre-of-Oslo%2C-Norway%20_iStock-898444450-min.jpg?VersionId=jpVVhtPlJvyLqEgKe9HEjSPR_WT7JE2Q" alt="Imagem de Oslo" width="700"><br>
-    <img src="https://wp.expatexplore.com/wp-content/uploads/2022/04/OsloGuide_Cityscape2.jpg" alt="Imagem de Oslo" width="700"><br>
-    <a href = "Oslo.html">Voltar ao topo</a>
-    </html>
+    <div class="faixa"></div>
+
+    <h1>Oslo</h1>
+    <p class="sub"><a href="index.html">Voltar ao Menu</a></p>
+
+    <h2>Sobre</h2>
+
+    <p class="texto">
+        A capital da Noruega vai muito além do que se imagina e surpreende com sua mistura de natureza, arte e cultura urbana.
+        Oslo encanta tanto os amantes de história quanto quem procura contato com paisagens deslumbrantes. Seus museus,
+        parques e construções modernas criam um cenário único. A cidade é acolhedora, organizada e cheia de possibilidades.
+    </p>
+
+    <p class="texto">
+        Além de construções dos tempos medievais, como a fortaleza Akershuis, Oslo é hoje uma cidade muito bem planejada,
+        com bairros inteiros de arquitetura contemporânea. Seus museus ocupam prédios elegantes e contam com acervos
+        importantes, tanto de artistas locais e escandinavos quanto do restante da Europa.
+    </p>
+
+    <p class="texto">
+        <strong>Fonte:</strong>
+        <a href="https://gallasdisperati.com.br/oslo/" target="_blank">gallasdisperati.com.br/oslo</a>
+    </p>
+
+    <h2>Imagens</h2>
+
+    <img src="https://borealisexpedicoes.com.br/wp-content/uploads/2025/06/noruega-oslo-a-noite_foap-visitnorway-com_-1024x768.jpg" alt="Oslo à noite">
+    <img src="https://images.goway.com/production/featured_images/View-of-the-city-centre-of-Oslo%2C-Norway%20_iStock-898444450-min.jpg?VersionId=jpVVhtPlJvyLqEgKe9HEjSPR_WT7JE2Q" alt="Centro de Oslo">
+    <img src="https://wp.expatexplore.com/wp-content/uploads/2022/04/OsloGuide_Cityscape2.jpg" alt="Vista panorâmica de Oslo">
+
+    <a href="#top" class="topo">Voltar ao topo</a>
+
+</body>
+</html>

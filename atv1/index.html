@@ -3,20 +3,126 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=2, initial-scale=1.0">
-    <meta name="author"  content = " Marina Moraes"> 
-    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagens</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 60px;
+            font-family: "Georgia", serif;
+            background: #0d0d0d url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            color: #e6e2d3;
+            line-height: 1.6;
+        }
+
+        .faixa {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 100%;
+            background: linear-gradient(#b38745, #6a4d21);
+        }
+
+        h1 {
+            font-size: 46px;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 4px;
+        }
+
+        h1::after {
+            content: "";
+            display: block;
+            margin-top: 10px;
+            width: 80px;
+            height: 3px;
+            background: #b38745;
+        }
+
+        p.sub {
+            opacity: 0.6;
+            margin-top: 8px;
+            font-size: 15px;
+            letter-spacing: 2px;
+            margin-bottom: 50px;
+        }
+
+        /* REMOVIDO: border-left */
+        .lista {
+            padding-left: 0;
+            max-width: 550px;
+        }
+
+        .destino {
+            margin-bottom: 45px;
+            position: relative;
+        }
+
+        /* REMOVIDO: o círculo dourado */
+        .destino::before {
+            display: none;
+        }
+
+        .destino a {
+            color: #b38745;
+            font-size: 30px;
+            text-decoration: none;
+            font-weight: 300;
+            transition: 0.3s ease;
+        }
+
+        .destino a:hover {
+            letter-spacing: 3px;
+            color: #e6e2d3;
+        }
+
+        .cidade-desc {
+            font-size: 14px;
+            opacity: 0.65;
+            margin-top: 6px;
+        }
+    </style>
+
 
 </head>
 
 <body>
 
+    <div class="faixa"></div>
+
     <h1>Menu</h1>
-    <a href = "Berna.html">Berna - Suiça</a><br>
-    <a href = "Amsterdã.html">Amsterdã - Países Baixos</a><br>
-    <a href = "Reykjavik.html">Reykjavik - Islândia</a><br>
-    <a href = "Oslo.html">Oslo - Noruega</a>
-    
+    <p class="sub">Selecione uma opção:</p>
+
+    <div class="lista">
+
+        <div class="destino">
+            <a href="Berna.html">Berna</a>
+            <div class="cidade-desc">Suíça — famosa por seu charmoso centro histórico medieval.</div>
+        </div>
+
+        <div class="destino">
+            <a href="Amsterdã.html">Amsterdã</a>
+            <div class="cidade-desc">Países Baixos — conhecida por seu patrimônio artístico, um elaborado sistema de
+                canais e casas estreitas com telhados de duas águas, legados da era dourada do século XVII na cidade.
+            </div>
+        </div>
+
+        <div class="destino">
+            <a href="Reykjavik.html">Reykjavik</a>
+            <div class="cidade-desc">Islândia — abriga os museus nacional e Saga, que contam a história viking da
+                Islândia.</div>
+        </div>
+
+        <div class="destino">
+            <a href="Oslo.html">Oslo</a>
+            <div class="cidade-desc">Noruega — a cidade é conhecida por suas áreas verdes e seus museus. </div>
+        </div>
+
+    </div>
+
 </body>
 
 </html>
