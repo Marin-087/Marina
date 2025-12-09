@@ -179,7 +179,7 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-    
+
 }
 
 .cardtopo .titulo {
@@ -193,7 +193,7 @@ body {
     display: block;
     width: 3px;
     height: 26px;
-    background: #d2232a;    
+    background: #d2232a;
 }
 
 
@@ -217,8 +217,8 @@ body {
     font-size: 36px;
     margin: 10px 0;
     white-space: nowrap;
-    
-    text-align: center; 
+
+    text-align: center;
 }
 
 .logodostimes {
@@ -308,3 +308,123 @@ body {
     text-decoration: underline;
 }
 
+.gridmidias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.bloco {
+    background: #fff;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+}
+
+.midia {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.midia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.midia:hover img {
+    transform: scale(1.08); /* zoom suave */
+}
+
+.midia::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: rgba(0,0,0,0.55);
+    z-index: 1;
+    transition: 0.4s ease;
+}
+
+.midia:hover::after {
+    background: rgba(0,0,0,0.75); /* escurece mais ao passar o mouse */
+}
+
+.tag {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    background: rgb(201, 37, 37);
+    color: white;
+    font-size: 20px;
+    padding: 4px 8px;
+    z-index: 3;
+}
+
+.texto-container {
+    position: absolute;
+    top: 260px;
+    left: 15px;
+    z-index: 2;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.textoimg {
+    font-size: 30px;
+    font-weight: 100;
+    color: white;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.subtextoimg {
+    color: white;
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.rotulo {
+    font-weight: 100;
+    font-size: 40px;
+    color: #181818;
+    letter-spacing: 0.6px;
+}
+
+.topo-bloco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 15px 0px;
+}
+
+.ver-todas {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(201, 37, 37);
+    text-decoration: none;
+    text-align: right;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.ver-todas:hover {
+    text-decoration: underline; /* sublinha quando passar o mouse */
+}
+
+.linha-separadora {
+    border: none;
+    border-top: 2px solid #181818;
+    margin: 0 0px 15px 0px;
+}
