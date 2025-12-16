@@ -339,7 +339,7 @@ body {
 }
 
 .midia:hover img {
-    transform: scale(1.08); /* zoom suave */
+    transform: scale(1.08); 
 }
 
 .midia::after {
@@ -355,7 +355,7 @@ body {
 }
 
 .midia:hover::after {
-    background: rgba(0,0,0,0.75); /* escurece mais ao passar o mouse */
+    background: rgba(0,0,0,0.75); 
 }
 
 .tag {
@@ -420,7 +420,7 @@ body {
 }
 
 .ver-todas:hover {
-    text-decoration: underline; /* sublinha quando passar o mouse */
+    text-decoration: underline; 
 }
 
 .linha-separadora {

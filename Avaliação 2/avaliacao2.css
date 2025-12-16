@@ -1,0 +1,23 @@
+.topo{
+    background-color: #242526;
+}
+
+.topo .topotitulo{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: whitesmoke;
+}
+
+.topo .toposublinhado a{
+    color: #61dafb;
+}
+
+.toposublinhado .ponto{
+    color: whitesmoke;
+    
+}
+
+.topo .topoabaixologo{
+    display: flex;
+}
