@@ -1,76 +1,44 @@
-* {
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
+    background: #e6e4e1;
 }
 
 .cabecalho {
-    position: fixed;        
-    top: 0;                 
-    left: 0;
-    width: 100%;            
-    height: 80px;
     background-color: #1d4656;
     color: white;
+    height: 80px;
     display: flex;
     align-items: center;
     gap: 15px;
     padding: 0 20px;
-    z-index: 1000;          
 }
 
 .cabecalho img {
-    position: center;
     height: 55px;
-    border-radius: 50%; 
-}
-
-.cabecalho h1 {
-    font-size: 26px;
+    border-radius: 50%;
 }
 
 main {
-    margin-top: 100px; 
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e6e4e1, #e6e4e1);
-}
-
-main {
-    min-height: 75vh;
+    min-height: calc(100vh - 120px);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .Login {
-    background-color: #ffffff;
+    background: white;
     width: 360px;
-    padding: 30px 25px;
+    padding: 30px;
     border-radius: 12px;
     border-top: 8px solid #1d4656;
 }
 
-.Login h2 {
-    text-align: center;
-    color: #1d4656;
-    margin-bottom: 10px;
-}
-
-.Login::before {
-    content: "Seu bem-estar começa aqui!";
+.cadastro-link {
     display: block;
     text-align: center;
-    font-size: 13px;
-    color: #777;
-    margin-bottom: 20px;
+    margin-top: 14px;
+    color: #1d4656;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .Login form {
@@ -86,7 +54,7 @@ main {
 
 .Login input {
     padding: 10px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     border: none;
     border-bottom: 2px solid #ccc;
     background-color: #f9f9f9;
@@ -98,6 +66,7 @@ main {
 }
 
 .Login button {
+    margin-top: 10px;
     padding: 12px;
     background-color: #1d4656;
     color: white;
@@ -109,13 +78,4 @@ main {
 
 .Login button:hover {
     background-color: #31748f;
-}
-
-footer {
-    position: fixed;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    color: #1d4656;
-    font-size: 13px;
 }
