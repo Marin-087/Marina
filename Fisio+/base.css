@@ -1,83 +1,83 @@
-/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: Arial, sans-serif;
-    background: #e6e4e1;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background: linear-gradient(135deg, #e6e4e1, #e6e4e1);
 }
 
-/* CABEÇALHO */
-header {
+
+.cabecalho {
+    position: fixed;        
+    top: 0;                 
+    left: 0;
+    width: 100%;            
+    height: 80px;
     background-color: #1d4656;
     color: white;
-    height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 15px;
+    padding: 0 20px;
+    z-index: 1000;          
 }
 
-/* CABEÇALHO COM LOGO */
 .cabecalho img {
+    align-self: center;
     height: 55px;
-    border-radius: 50%;
+    border-radius: 50%; 
 }
 
-header h1 {
+.cabecalho h1 {
     font-size: 26px;
 }
 
-/* CONTEÚDO PRINCIPAL */
 main {
-    flex: 1;
+    margin-top: 100px; 
+    min-height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* CARD PADRÃO (LOGIN E CADASTRO) */
-.Login,
-main form {
-    background-color: white;
+.Login {
+    background-color: #ffffff;
     width: 360px;
     padding: 30px 25px;
     border-radius: 12px;
-}
-
-/* LOGIN */
-.Login {
     border-top: 8px solid #1d4656;
 }
 
 .Login h2 {
     text-align: center;
     color: #1d4656;
+    margin-bottom: 10px;
+}
+
+.Login::before {
+    content: "Seu bem-estar começa aqui!";
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #777;
     margin-bottom: 20px;
 }
 
-/* FORMULÁRIOS */
-form {
+.Login form {
     display: flex;
     flex-direction: column;
 }
 
-/* LABEL */
-label {
+.Login label {
     font-size: 13px;
     color: #333;
     margin-bottom: 4px;
 }
 
-/* INPUT */
-input {
+.Login input {
     padding: 10px;
     margin-bottom: 18px;
     border: none;
@@ -85,13 +85,12 @@ input {
     background-color: #f9f9f9;
 }
 
-input:focus {
+.Login input:focus {
     outline: none;
     border-bottom-color: #1d4656;
 }
 
-/* BOTÕES */
-button {
+.Login button {
     padding: 12px;
     background-color: #1d4656;
     color: white;
@@ -101,31 +100,29 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.Login button:hover {
     background-color: #31748f;
 }
 
-/* LINK CADASTRO */
 .cadastro-link {
-    margin-top: 14px;
     text-align: center;
-    font-size: 14px;
+    margin-top: 10px;
     color: #1d4656;
-    font-weight: bold;
     text-decoration: none;
+    font-size: 14px;
 }
 
 .cadastro-link:hover {
     text-decoration: underline;
+    color: #31748f;
 }
 
-/* FOOTER */
+
 footer {
-    height: 40px;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
     text-align: center;
-    font-size: 13px;
     color: #1d4656;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 13px;
 }
