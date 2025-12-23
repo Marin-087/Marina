@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="estilo.css">
+    <title>Fisio+ | Cadastro</title>
+    <link rel="stylesheet" href="base.css">
 </head>
+
 <body>
 
-<header><h1>Cadastro</h1></header>
+    <header class="cabecalho">
+        <img src="logofisio.png" alt="Fisio+ Logo">
+        <h1>FisioMais</h1>
+    </header>
 
-<main>
-    <form action="dashboard.html">
-        <label for="nome">Nome</label>
-        <input id="nome" type="text">
+    <main>
+        <div class="acao">
+            <h2>Criar conta</h2>
 
-        <label for="email">E-mail</label>
-        <input id="email" type="email">
+            <form action="dashboard.html">
+                <label for="email">Nome</label>
+                <input id="email" type="text" required>
 
-        <label for="senha">Senha</label>
-        <input id="senha" type="password">
+                <label for="email">E-mail</label>
+                <input id="email" type="email" required>
 
-        <button>Cadastrar</button>
-    </form>
-</main>
+                <label for="senha">Senha</label>
+                <input id="senha" type="password" required>
 
-<footer>© Fisiomais</footer>
+                <button type="submit">Cadastrar</button>
+
+                <a href="index.html" class="opc-link">Login</a>
+            </form>
+        </div>
+    </main>
+
+    <footer>© Fisiomais</footer>
 </body>
+
 </html>
