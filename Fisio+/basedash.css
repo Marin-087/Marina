@@ -1,23 +1,14 @@
-/* =========================
-   RESET BÁSICO
-========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   BODY
-========================= */
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #e6e4e1, #e6e4e1);
 }
 
-/* =========================
-   CABEÇALHO
-========================= */
 .cabecalho {
     position: fixed;
     top: 0;
@@ -42,17 +33,18 @@ body {
     font-size: 26px;
 }
 
-.menu-lateral {
+.menulateral {
     position: fixed;
     top: 80px;
-    left: 0;
-    width: 210px;
+    left: -160px;
+    width: 160px;
     height: calc(100vh - 80px);
     background: linear-gradient(180deg, #143640, #1d4656);
     padding-top: 25px;
+    transition: left 0.3s;
 }
 
-.menu-lateral a {
+.menulateral a {
     display: block;
     padding: 14px 22px;
     color: white;
@@ -61,8 +53,17 @@ body {
     transition: background 0.3s, padding-left 0.3s;
 }
 
-.menu-lateral a:hover {
+.menulateral a:hover {
     background-color: rgba(255,255,255,0.12);
     padding-left: 30px;
 }
 
+.botaomenu {
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#botaomenu:checked ~ .menulateral {
+    left: 0;
+}
