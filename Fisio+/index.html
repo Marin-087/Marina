@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <title>Fisio+ | Login</title>
-    <link rel="stylesheet" href="base.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Fisio+</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
-
 <body>
-
-    <header class="cabecalho">
-        <img src="fisiong.png" alt="Fisio+ Logo">
-        <h1>FisioMais</h1>
-    </header>
-
-    <main>
-        <div class="acao">
-            <h2>Login</h2>
-
-            <form action="dashboard.html">
-                <label for="email">E-mail</label>
-                <input id="email" type="email" required>
-
-                <label for="senha">Senha</label>
-                <input id="senha" type="password" required>
-
-                <button type="submit">Entrar</button>
-
-                <a href="cadastro.html" class="opc-link">Cadastre-se</a>
-            </form>
+    <div class="login-container">
+        <div class="side-image">
+            <div class="brand-content">
+                <h1 class="logo">Fisio+</h1>
+                <div class="welcome-text">
+                    <h2 class="side-title">Bem-Vindo,<br><span>Estamos felizes em tê-lo novamente!</span></h2>
+                </div>
+            </div>
         </div>
-
-    </main>
-
-    <footer>© FisioMais</footer>
-
+        <div class="login-section">
+            <div class="form-block-active" id="login-block">
+                <p class="top-link">Não tem uma conta?<a href="h" onclick="showBlock('register')">Cadastre-se</a></p>
+                <h1 class="form-title">Login</h1>
+                <div class="social-login">
+                    <button class="btn-google"><i class="fab fa-google"></i>Google</button>
+                    <button class="btn-apple"><i class="fab fa-apple"></i></button>
+                </div>
+                <div class="divider"><span>OU</span></div>
+                <form>
+                    <div class="input-group">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="digite seu e-mail">
+                    </div>
+                    <div class="input-group">
+                        <div class="label-row">
+                            <label>Senha</label>
+                            <a href="#" class="accent-link" onclick="showBlock('forgot')">Esqueceu sua senha?</a>
+                        </div>
+                        <input type="password" placeholder="digite sua senha">
+                    </div>
+                    <button type="submit" class="btn-signin">Cadastrar-se</button>
+                </form>
+            </div>
+            <div class="form-block" id="register-block">
+                <p class="top-link">Já tem uma conta? <a href="#" onclick="showBlock('login')">Entrar</a></p>
+                <h1 class="form-title">Criar Conta</h1>
+                <form>
+                    <div class="input-group"><label>Nome Completo</label><input type="text" placeholder="digite seu nome completo"></div>
+                    <div class="input-group"><label>E-mail</label><input type="email" placeholder="digite seu e-mail"></div>
+                    <div class="input-group"><label>Senha</label><input type="password" placeholder="digite sua senha"></div>
+                    <button type="submit" class="btn-signin">Criar Conta</button>
+                </form>
+            </div>
+            <div class="form-block" id="forgot-block">
+                <p class="top-link"><a href="#" onclick="showBlock('login')"><i class="fas fa-arrow-left"></i>Voltar ao Login</a></p>
+                <h1 class="form-title">Redefinir Senha</h1>
+                <p class="description">Informe seu e-mail cadastrado para receber o código de redefinição da senha.</p>
+                <form>
+                    <div class="input-group"><label>E-mail</label><input type="email" placeholder="digite seu e-mail"></div>
+                    <button type="submit" class="btn-signin">Enviar código</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
 </body>
-
 </html>
