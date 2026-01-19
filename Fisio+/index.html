@@ -46,7 +46,7 @@
 
             <div class="divider"><span>OU</span></div>
 
-            <form>
+            <form onsubmit="redirectDashboard(event)">
                 <div class="input-group">
                     <label>E-mail</label>
                     <input type="email" placeholder="digite seu e-mail">
@@ -75,7 +75,7 @@
 
             <h1 class="form-title">Criar Conta</h1><br>
 
-            <form>
+            <form onsubmit="redirectDashboard(event)">
                 <div class="input-group">
                     <label>Nome Completo</label>
                     <input type="text" placeholder="digite seu nome completo">
@@ -131,6 +131,11 @@ function showBlock(type) {
 
     document.getElementById(type + '-block')
         .classList.add('active');
+}
+
+function redirectDashboard(event) {
+    event.preventDefault();
+    window.location.href = "dashboard.html";
 }
 </script>
 
