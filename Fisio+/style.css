@@ -270,5 +270,10 @@ input:focus {
     gap: 10px;
 }
 
-
+.logo-img {
+    width: 70px;
+    margin-bottom: auto;
+    margin-left: -50px;
+    margin-top: -50px;
+}
 

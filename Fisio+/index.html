@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Fisio+</title>
+    <link rel="icon" href="fisiong.png" type="image/png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -14,11 +15,11 @@
 <div class="login-container">
     <div class="side-image">
         <div class="brand-content">
-            <h1 class="logo">Fisio+</h1>
+            <img src="fisiong.png" alt="Fisio+" class="logo-img">
             <div class="welcome-text">
                 <h2 class="side-title">
-                    Bem-Vindo,<br>
-                    <span>Estamos felizes em tê-lo novamente!</span>
+                    Bem-Vindo!<br>
+                    <span>Seu cuidado começa aqui.</span>
                 </h2>
             </div>
         </div>
@@ -26,14 +27,13 @@
 
     <div class="login-section">
 
-        <!-- LOGIN -->
         <div class="form-block active" id="login-block">
             <p class="top-link">
                 Não tem uma conta?
                 <a href="#" onclick="showBlock('register')">Cadastre-se</a>
             </p>
 
-            <h1 class="form-title">Login</h1>
+            <h1 class="form-title">Login</h1><br>
 
             <div class="social-login">
                 <button class="btn-google">
@@ -67,14 +67,13 @@
             </form>
         </div>
 
-        <!-- CADASTRO -->
         <div class="form-block" id="register-block">
             <p class="top-link">
                 Já tem uma conta?
                 <a href="#" onclick="showBlock('login')">Entrar</a>
             </p>
 
-            <h1 class="form-title">Criar Conta</h1>
+            <h1 class="form-title">Criar Conta</h1><br>
 
             <form>
                 <div class="input-group">
@@ -96,7 +95,6 @@
             </form>
         </div>
 
-        <!-- ESQUECI SENHA -->
         <div class="form-block" id="forgot-block">
             <p class="top-link">
                 <a href="#" onclick="showBlock('login')">

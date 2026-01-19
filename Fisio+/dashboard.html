@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Fisio+</title>
+    <link rel="stylesheet" href="stylepags.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="fisiong.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="logofisio.png" alt="Fisio+">
+            <span>Sistema Fisio+</span>
+        </div>
+
+        <nav class="menu">
+            <a href="dashboard.html" class="active">
+                <i class="fas fa-chart-line"></i> Menu
+            </a>
+            <a href="clientes.html">
+                <i class="fas fa-user-injured"></i> Clientes
+            </a>
+            <a href="profissionais.html">
+                <i class="fas fa-user-md"></i> Profissionais
+            </a>
+            <a href="agendamentos.html">
+                <i class="fas fa-calendar-alt"></i> Agendamentos
+            </a>
+            <a href="checkin.html">
+                <i class="fas fa-clipboard-check"></i> Check-in
+            </a>
+            <a href="avaliacoes.html">
+                <i class="fas fa-notes-medical"></i> Avaliações
+            </a>
+            <a href="financeiro.html">
+                <i class="fas fa-wallet"></i> Financeiro
+            </a>
+            <a href="relatorios.html">
+                <i class="fas fa-chart-pie"></i> Relatórios
+            </a>
+            <a href="configuracoes.html">
+                <i class="fas fa-cog"></i> Configurações
+            </a>
+        </nav>
+
+        <div class="logout">
+            <a href="index.html">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h1>Menu</h1>
+            <span class="welcome">
+                Bem-vindo(a), <strong>Administrador</strong>
+            </span>
+        </header>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <i class="fas fa-user-injured"></i>
+                <div>
+                    <span>Pacientes Ativos</span>
+                    <strong>124</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-user-md"></i>
+                <div>
+                    <span>Profissionais</span>
+                    <strong>7</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-calendar-check"></i>
+                <div>
+                    <span>Atendimentos Hoje</span>
+                    <strong>18</strong>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <i class="fas fa-wallet"></i>
+                <div>
+                    <span>Faturamento do Mês</span>
+                    <strong>R$ 8.450</strong>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="panel">
+            <h2>Atendimentos de Hoje</h2><br>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Paciente</th>
+                        <th>Profissional</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00</td>
+                        <td>Maria Souza</td>
+                        <td>Dr. Carlos Lima</td>
+                        <td class="status confirmado">Confirmado</td>
+                    </tr>
+                    <tr>
+                        <td>09:30</td>
+                        <td>João Pereira</td>
+                        <td>Dra. Ana Ribeiro</td>
+                        <td class="status andamento">Em andamento</td>
+                    </tr>
+                    <tr>
+                        <td>11:00</td>
+                        <td>Lucas Martins</td>
+                        <td>Dr. Rafael Costa</td>
+                        <td class="status pendente">Pendente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
