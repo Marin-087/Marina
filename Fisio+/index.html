@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Fisio+</title>
+    <title>Acesso | Fisio+</title>
+
     <link rel="icon" href="fisiong.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
+<!-- ================= LOGIN ================= -->
 <div class="login-container">
+
     <div class="side-image">
         <div class="brand-content">
             <img src="fisiong.png" alt="Fisio+" class="logo-img">
+
             <div class="welcome-text">
                 <h2 class="side-title">
-                    Bem-Vindo!<br>
-                    <span>Seu cuidado começa aqui.</span>
+                    Gestão inteligente<br>
+                    <span>para sua clínica.</span>
                 </h2>
             </div>
         </div>
@@ -27,17 +32,18 @@
 
     <div class="login-section">
 
+        <!-- LOGIN -->
         <div class="form-block active" id="login-block">
             <p class="top-link">
-                Não tem uma conta?
-                <a href="#" onclick="showBlock('register')">Cadastre-se</a>
+                Ainda não utiliza o sistema?
+                <a href="#" onclick="showBlock('register')">Criar conta</a>
             </p>
 
-            <h1 class="form-title">Login</h1><br>
+            <h1 class="form-title">Acessar Sistema</h1><br>
 
             <div class="social-login">
                 <button class="btn-google">
-                    <i class="fab fa-google"></i>Google
+                    <i class="fab fa-google"></i> Entrar com Google
                 </button>
                 <button class="btn-apple">
                     <i class="fab fa-apple"></i>
@@ -48,8 +54,8 @@
 
             <form onsubmit="redirectDashboard(event)">
                 <div class="input-group">
-                    <label>E-mail</label>
-                    <input type="email" placeholder="digite seu e-mail">
+                    <label>E-mail corporativo</label>
+                    <input type="email" placeholder="ex: contato@suaclinica.com">
                 </div>
 
                 <div class="input-group">
@@ -57,66 +63,68 @@
                         <label>Senha</label>
                         <a href="#" class="accent-link"
                            onclick="showBlock('forgot')">
-                            Esqueceu sua senha?
+                            Recuperar acesso
                         </a>
                     </div>
-                    <input type="password" placeholder="digite sua senha">
+                    <input type="password" placeholder="Digite sua senha">
                 </div>
 
-                <button type="submit" class="btn-signin">Entrar</button>
+                <button type="submit" class="btn-signin">Entrar no sistema</button>
             </form>
         </div>
 
+        <!-- CADASTRO -->
         <div class="form-block" id="register-block">
             <p class="top-link">
-                Já tem uma conta?
-                <a href="#" onclick="showBlock('login')">Entrar</a>
+                Já possui cadastro?
+                <a href="#" onclick="showBlock('login')">Acessar sistema</a>
             </p>
 
-            <h1 class="form-title">Criar Conta</h1><br>
+            <h1 class="form-title">Cadastrar Clínica</h1><br>
 
             <form onsubmit="redirectDashboard(event)">
                 <div class="input-group">
-                    <label>Nome Completo</label>
-                    <input type="text" placeholder="digite seu nome completo">
+                    <label>Nome do responsável</label>
+                    <input type="text" placeholder="Nome completo">
                 </div>
 
                 <div class="input-group">
-                    <label>E-mail</label>
-                    <input type="email" placeholder="digite seu e-mail">
+                    <label>E-mail da clínica</label>
+                    <input type="email" placeholder="ex: admin@suaclinica.com">
                 </div>
 
                 <div class="input-group">
-                    <label>Senha</label>
-                    <input type="password" placeholder="digite sua senha">
+                    <label>Senha de acesso</label>
+                    <input type="password" placeholder="Crie uma senha segura">
                 </div>
 
-                <button type="submit" class="btn-signin">Criar Conta</button>
+                <button type="submit" class="btn-signin">Criar conta e acessar</button>
             </form>
         </div>
 
+        <!-- RECUPERAÇÃO -->
         <div class="form-block" id="forgot-block">
             <p class="top-link">
                 <a href="#" onclick="showBlock('login')">
-                    <i class="fas fa-arrow-left"></i> Voltar ao Login
+                    <i class="fas fa-arrow-left"></i> Voltar
                 </a>
             </p>
 
-            <h1 class="form-title">Redefinir Senha</h1>
+            <h1 class="form-title">Recuperar acesso</h1>
 
             <p class="description">
-                Informe seu e-mail cadastrado para receber o código
-                de redefinição da senha.
+                Informe o e-mail cadastrado para receber as instruções
+                de redefinição de senha.
             </p>
 
             <form>
                 <div class="input-group">
                     <label>E-mail</label>
-                    <input type="email" placeholder="digite seu e-mail">
+                    <input type="email" placeholder="E-mail da clínica">
                 </div>
 
                 <button type="submit" class="btn-signin">
-                    Enviar código
+                    Enviar instruções
                 </button>
             </form>
         </div>
@@ -124,6 +132,44 @@
     </div>
 </div>
 
+<!-- ================= PORTFÓLIO / APRESENTAÇÃO ================= -->
+<section class="portfolio-clinic">
+
+    <div class="portfolio-header">
+        <h2>Controle total da sua <span>Clínica</span></h2>
+        <p>Uma plataforma completa para organizar atendimentos, pacientes e profissionais.</p>
+    </div>
+
+    <div class="portfolio-cards">
+
+        <div class="portfolio-card">
+            <i class="fas fa-users"></i>
+            <h3>Gestão de Pacientes</h3>
+            <p>Cadastro completo, histórico clínico e acompanhamento centralizado.</p>
+        </div>
+
+        <div class="portfolio-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Agenda Inteligente</h3>
+            <p>Organize horários, sessões e profissionais de forma simples.</p>
+        </div>
+
+        <div class="portfolio-card">
+            <i class="fas fa-user-nurse"></i>
+            <h3>Equipe e Profissionais</h3>
+            <p>Gerencie fisioterapeutas, permissões e atendimentos.</p>
+        </div>
+
+        <div class="portfolio-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Relatórios e Controle</h3>
+            <p>Acompanhe dados, desempenho e evolução da clínica.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= SCRIPT ================= -->
 <script>
 function showBlock(type) {
     document.querySelectorAll('.form-block')

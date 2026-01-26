@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda | Fisio+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssagendamento.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="brand">Fisio+</div>
+
+        <nav class="nav">
+
+            <a href="../dashboard.html">Menu</a>
+
+
+            <div class="nav-group">
+                <span>Atendimento</span>
+                <div class="dropdown">
+                    <a href="agenda.html">Agenda</a>
+                    <a href="checkin.html">Check-in</a>
+                    <a href="avaliaçoes.html">Avaliações</a>
+                    <a href="prontuarios.html">Prontuários</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Cadastros</span>
+                <div class="dropdown">
+                    <a href="../cadastro/clientes.html">Clientes</a>
+                    <a href="../cadastro/profissionais.html">Profissionais</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Financeiro</span>
+                <div class="dropdown">
+                    <a href="mensalidades.html">Mensalidades</a>
+                    <a href="financeiro.html">Financeiro</a>
+                    <a href="relatorios.html">Relatórios</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <div class="top-actions">
+            <span>☰</span>
+            <div class="avatar">
+                <img src="../logofisio.png" alt="Logo Fisio+">
+            </div>
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="agenda-header">
+            <div>
+                <h1>Agenda do dia</h1>
+                <p>Quarta-feira, 22 de janeiro</p>
+            </div>
+
+            <div class="agenda-actions">
+                <button class="ghost">Hoje</button>
+                <button class="ghost">Semana</button>
+                <a href="#modal" class="primary">+ Novo agendamento</a>
+            </div>
+        </section>
+
+        <section class="timeline">
+
+            <div class="hour">
+                <span>08:00</span>
+                <div class="slot confirmado">
+                    <strong>Ana Paula</strong>
+                    <p>Ortopedia • Dr. Lucas</p>
+                </div>
+            </div>
+
+            <div class="hour empty">
+                <span>09:00</span>
+                <a href="#modal" class="add">+ Agendar</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-box">
+            <h2>Novo agendamento</h2>
+
+            <label>Cliente</label>
+            <input type="text">
+
+            <label>Profissional</label>
+            <input type="text">
+
+            <label>Horário</label>
+            <input type="time">
+
+            <div class="modal-actions">
+                <a href="#" class="ghost">Cancelar</a>
+                <a href="#sucesso" class="primary">Salvar</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="sucesso" class="toast">
+        <div class="toast-box">
+            <span>Agendamento realizado com sucesso!</span>
+            <a href="#" class="ok">OK</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

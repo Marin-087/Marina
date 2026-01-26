@@ -3,137 +3,138 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard | Fisio+</title>
-    <link rel="stylesheet" href="stylepags.css">
+    <title>Home | Fisio+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="fisiong.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+    <link rel="stylesheet" href="stylepags.css">
 </head>
 
 <body>
 
-    <aside class="sidebar">
-        <div class="brand">
-            <img src="logofisio.png" alt="Fisio+">
-            <span>Sistema Fisio+</span>
-        </div>
+    <header class="topbar">
 
-        <nav class="menu">
-            <a href="dashboard.html" class="active">
-                <i class="fas fa-chart-line"></i> Menu
-            </a>
-            <a href="clientes.html">
-                <i class="fas fa-user-injured"></i> Clientes
-            </a>
-            <a href="profissionais.html">
-                <i class="fas fa-user-md"></i> Profissionais
-            </a>
-            <a href="agendamentos.html">
-                <i class="fas fa-calendar-alt"></i> Agendamentos
-            </a>
-            <a href="checkin.html">
-                <i class="fas fa-clipboard-check"></i> Check-in
-            </a>
-            <a href="avaliacoes.html">
-                <i class="fas fa-notes-medical"></i> Avaliações
-            </a>
-            <a href="financeiro.html">
-                <i class="fas fa-wallet"></i> Financeiro
-            </a>
-            <a href="relatorios.html">
-                <i class="fas fa-chart-pie"></i> Relatórios
-            </a>
-            <a href="configuracoes.html">
-                <i class="fas fa-cog"></i> Configurações
-            </a>
+        <div class="brand">Fisio+</div>
+
+        <nav class="nav">
+
+            <a href="dashboard.html">Menu</a>
+
+            <div class="nav-group">
+                <span>Atendimento</span>
+                <div class="dropdown">
+                    <a href="atendimento/agendamentos.html">Agenda</a>
+                    <a href="atendimento/checkin.html">Check-in</a>
+                    <a href="atendimento/avaliaçoes.html">Avaliações</a>
+                    <a href="atendimento/prontuarios.html">Prontuários</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Cadastros</span>
+                <div class="dropdown">
+                    <a href="cadastro/clientes.html">Clientes</a>
+                    <a href="cadastro/profissionais.html">Profissionais</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Financeiro</span>
+                <div class="dropdown">
+                    <a href="mensalidades.html">Mensalidades</a>
+                    <a href="financeiro.html">Financeiro</a>
+                    <a href="relatorios.html">Relatórios</a>
+                </div>
+            </div>
+
         </nav>
 
-        <div class="logout">
-            <a href="index.html">
-                <i class="fas fa-sign-out-alt"></i> Sair
-            </a>
+        <div class="top-actions">
+            <span>☰</span>
+            <div class="avatar">
+                <img src="logofisio.png" alt="Logo Fisio+">
+            </div>
         </div>
-    </aside>
 
-    <main class="main-content">
+    </header>
 
-        <header class="topbar">
-            <h1>Menu</h1>
-            <span class="welcome">
-                Bem-vindo(a), <strong>Administrador</strong>
-            </span>
-        </header>
+    <main class="container">
 
-        <section class="stats">
-
-            <div class="stat-card">
-                <i class="fas fa-user-injured"></i>
-                <div>
-                    <span>Pacientes Ativos</span>
-                    <strong>124</strong>
-                </div>
+        <section class="today">
+            <div>
+                <h1>Hoje na clínica</h1>
+                <p>Resumo operacional do dia</p>
             </div>
 
-            <div class="stat-card">
-                <i class="fas fa-user-md"></i>
+            <div class="today-stats">
                 <div>
-                    <span>Profissionais</span>
-                    <strong>7</strong>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <i class="fas fa-calendar-check"></i>
-                <div>
-                    <span>Atendimentos Hoje</span>
                     <strong>18</strong>
+                    <span>Atendimentos</span>
+                </div>
+                <div>
+                    <strong>3</strong>
+                    <span>Faltas</span>
+                </div>
+                <div>
+                    <strong>2</strong>
+                    <span>Encaixes</span>
+                </div>
+                <div>
+                    <strong>R$ 1.420</strong>
+                    <span>Faturamento</span>
                 </div>
             </div>
 
-            <div class="stat-card">
-                <i class="fas fa-wallet"></i>
-                <div>
-                    <span>Faturamento do Mês</span>
-                    <strong>R$ 8.450</strong>
-                </div>
-            </div>
+            <div class="today-actions">
+                <a href="agendamentos.html" class="primary">Abrir agenda</a>
 
         </section>
 
-        <section class="panel">
-            <h2>Atendimentos de Hoje</h2><br>
+        <section class="grid">
 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Horário</th>
-                        <th>Paciente</th>
-                        <th>Profissional</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>08:00</td>
-                        <td>Maria Souza</td>
-                        <td>Dr. Carlos Lima</td>
-                        <td class="status confirmado">Confirmado</td>
-                    </tr>
-                    <tr>
-                        <td>09:30</td>
-                        <td>João Pereira</td>
-                        <td>Dra. Ana Ribeiro</td>
-                        <td class="status andamento">Em andamento</td>
-                    </tr>
-                    <tr>
-                        <td>11:00</td>
-                        <td>Lucas Martins</td>
-                        <td>Dr. Rafael Costa</td>
-                        <td class="status pendente">Pendente</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="card">
+                <h3>Próximos atendimentos</h3>
+
+                <ul class="timeline">
+                    <li><span>09:00</span> Ana — Ortopedia</li>
+                    <li><span>10:00</span> Carlos — Pilates</li>
+                    <li><span>11:30</span> Mariana — Reavaliação</li>
+                </ul>
+
+                <a class="link">Ver agenda completa →</a>
+            </div>
+
+            <div class="card">
+                <h3>Check-in ao vivo</h3>
+
+                <ul class="checkin">
+                    <li class="ok">Esmeraldino Suarez — Chegou</li>
+                    <li class="wait">Carlos — Aguardando</li>
+                    <li class="late">Mariana — Não compareceu</li>
+                </ul>
+
+                <a class="link">Gerenciar check-in →</a>
+            </div>
+
+            <div class="card">
+                <h3>Financeiro</h3>
+
+                <div class="money">
+                    <div>
+                        <strong>Hoje</strong>
+                        <span>R$ 1.420</span>
+                    </div>
+                    <div>
+                        <strong>Semana</strong>
+                        <span>R$ 6.880</span>
+                    </div>
+                    <div>
+                        <strong>Em aberto</strong>
+                        <span class="alert">R$ 980</span>
+                    </div>
+                </div>
+
+                <a class="link">Ver financeiro →</a>
+            </div>
+
         </section>
 
     </main>

@@ -14,16 +14,18 @@
     font-family: 'inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* ================= BODY ================= */
 body {
     background-color: var(--bg-deep);
     color: var(--text-white);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 20px;
 }
 
+/* ================= LOGIN ================= */
 .login-container {
     display: flex;
     width: 100%;
@@ -34,24 +36,27 @@ body {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px; /* 👈 AJUSTADO */
 }
 
+/* ================= SIDE IMAGE ================= */
 .side-image {
     flex: 1.1;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url('fisioilustrativa.jpg') center/cover;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)),
+                url('fisioilustrativa.jpg') center/cover;
     padding: 60px;
     display: flex;
     flex-direction: column;
 }
 
-.logo {
-    font-size: 2.2rem;
-    font-weight: 800;
-    letter-spacing: -1px;
+.logo-img {
+    width: 70px;
     margin-bottom: auto;
+    margin-left: -50px;
+    margin-top: -50px;
 }
 
-.welcome-text h2{
+.welcome-text h2 {
     font-size: 2.8rem;
     font-weight: 700;
     line-height: 1.1;
@@ -63,168 +68,18 @@ body {
     font-size: 2.4rem;
 }
 
+/* ================= LOGIN SECTION ================= */
 .login-section {
     flex: 1;
     padding: 40px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.form-wrapper {
-    width: 100%;
-}
-
-.signup-link a {
-    color: var(--primary-blue);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.form-tittle {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.social-login {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 25px;
-}
-
-.btn-google, .btn-apple {
-    cursor: pointer;
-    border: 1px solid #333;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-google {
-    background: white;
-    color: #111;
-    flex: 5;
-    padding: 12px;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.btn-google {
-    width: 18px;
-    margin-right: 10px;
-}
-
-.btn-apple {
-    background: #222;
-    color: white;
-    flex: 1;
-    font-size: 1.3rem;
-}
-
-.btn-google:hover, .btn-apple:hover {
-    transform: translateY(-2px); box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1) ;
-}
-
-.divider {
-    text-align: center;
-    margin: 25px 0;
-    position: relative;
-}
-
-.divider::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0; 
-    height: 1px;
-    background: #2a2d31;
-    z-index: 1;
-}
-
-.divider span{
-    position: relative;
-    z-index: 2;
-    background: var(--card-bg);
-    padding: 0 15px;
-    color: var(--text-dim);
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.input-group {
-    margin-bottom: 22px;
-}
-
-.label-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-}
-
-label {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    font-weight: 500;
-}
-
-.forgot-pass{
-    font-size: 0.8rem;
-    color: var(--primary-blue);
-    text-decoration: none;
-}
-
-input {
-    width: 100%;
-    padding: 16px;
-    background: var(--input-fill);
-    border: 2px solid transparent;
-    border-radius: 12px;
-    color: white;
-    font-size: 0.95rem;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-input:focus {
-    outline: none;
-    border-color: var(--primary-blue);
-    background: #24282e;
-}
-
-.btn-signin {
-    width: 100%;
-    padding: 16px;
-    background: var(--primary-blue);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: 0.3s;
-}
-
-.btn-signin:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 123, 225, 0.4);
-}
-
-@media (max-width: 992px) {
-    .side-image {display: none; }
-    .login-container {max-width: 500px; height:auto;}
-    .login-section {padding: 40px, 30px;}
-}
-
-.login-section {
     position: relative;
     overflow: hidden;
 }
 
+/* ================= FORM BLOCK ================= */
 .form-block {
     position: absolute;
     width: 100%;
@@ -242,14 +97,22 @@ input:focus {
     transform: translateX(0);
 }
 
+.form-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* ================= LINKS ================= */
 .top-link {
     text-align: right;
     font-size: 0.85rem;
     margin-bottom: 35px;
-    color: var(--text-dim)
+    color: var(--text-dim);
 }
 
-.top-link a, .accent-link{
+.top-link a,
+.accent-link {
     color: var(--primary-blue);
     text-decoration: none;
     font-weight: 600;
@@ -263,17 +126,205 @@ input:focus {
     line-height: 1.5;
 }
 
-.btn-google {
+/* ================= SOCIAL LOGIN ================= */
+.social-login {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.btn-google,
+.btn-apple {
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 12px;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-google {
+    background: white;
+    color: #111;
+    flex: 5;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 0.9rem;
     gap: 10px;
 }
 
-.logo-img {
-    width: 70px;
-    margin-bottom: auto;
-    margin-left: -50px;
-    margin-top: -50px;
+.btn-apple {
+    background: #222;
+    color: white;
+    flex: 1;
+    font-size: 1.3rem;
 }
 
+.btn-google:hover,
+.btn-apple:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+}
+
+/* ================= DIVIDER ================= */
+.divider {
+    text-align: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #2a2d31;
+}
+
+.divider span {
+    position: relative;
+    background: var(--card-bg);
+    padding: 0 15px;
+    color: var(--text-dim);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+/* ================= INPUTS ================= */
+.input-group {
+    margin-bottom: 22px;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+label {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    background: var(--input-fill);
+    border: 2px solid transparent;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background: #24282e;
+}
+
+/* ================= BUTTON ================= */
+.btn-signin {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-signin:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,123,225,0.4);
+}
+
+/* ================= PORTFÓLIO ================= */
+.portfolio-clinic {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px 20px 80px; /* 👈 MAIS COLADO */
+    border-top: 1px solid #1f2328;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-header h2 {
+    font-size: 2.4rem;
+}
+
+.portfolio-header h2 span {
+    color: var(--primary-blue);
+}
+
+.portfolio-header p {
+    margin-top: 10px;
+    font-size: 1.05rem;
+    color: var(--text-dim);
+}
+
+.portfolio-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 32px 28px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: 0.35s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+}
+
+.portfolio-card i {
+    font-size: 2.6rem;
+    color: var(--primary-blue);
+    margin-bottom: 18px;
+}
+
+.portfolio-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.portfolio-card p {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 992px) {
+    .side-image {
+        display: none;
+    }
+
+    .login-container {
+        max-width: 500px;
+        height: auto;
+    }
+
+    .login-section,
+    .form-block {
+        padding: 30px;
+    }
+}

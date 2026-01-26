@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Check-in | Fisio+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="csscheckin.css">
+    <link rel="icon" href="logofisio.png">
+
+</head>
+
+<body>
+
+    <!-- ================= TOPBAR ================= -->
+    <header class="topbar">
+        <div class="brand">Fisio+</div>
+
+        <nav class="nav">
+            <a href="dashboard.html">Menu</a>
+
+            <div class="nav-group">
+                <span>Atendimento</span>
+                <div class="dropdown">
+                    <a href="agendamentos.html">Agenda</a>
+                    <a href="checkin.html" class="active">Check-in</a>
+                    <a href="avaliaçoes.html">Avaliações</a>
+                    <a href="prontuarios.html">Prontuários</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Cadastros</span>
+                <div class="dropdown">
+                    <a href="../cadastro/clientes.html">Clientes</a>
+                    <a href="../cadastro/profissionais.html">Profissionais</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Financeiro</span>
+                <div class="dropdown">
+                    <a href="mensalidades.html">Mensalidades</a>
+                    <a href="financeiro.html">Financeiro</a>
+                    <a href="relatorios.html">Relatórios</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="top-actions">
+            <span>☰</span>
+            <div class="avatar">
+                <img src="../logofisio.png" alt="Fisio+">
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= CONTAINER ================= -->
+    <main class="container">
+
+        <!-- ==== STATUS CARDS ==== -->
+        <section class="stats">
+            <div class="stat-card">
+                <strong>Pacientes Hoje</strong>
+                <span>18</span>
+            </div>
+            <div class="stat-card compareceu">
+                <strong>Compareceram</strong>
+                <span>12</span>
+            </div>
+            <div class="stat-card nao-compareceu">
+                <strong>Não Compareceram</strong>
+                <span>6</span>
+            </div>
+        </section>
+
+        <!-- ==== FILTRO ==== -->
+        <section class="filter">
+            <label for="filtro-status">Filtrar por status:</label>
+            <select id="filtro-status">
+                <option value="todos">Todos</option>
+                <option value="compareceu">Compareceu</option>
+                <option value="naochegou">Não Compareceu</option>
+            </select>
+        </section>
+
+        <!-- ==== LISTA DE PACIENTES COMO SLOTS ==== -->
+        <section class="timeline">
+            <!-- Slot paciente -->
+            <div class="hour">
+                <span>08:00</span>
+                <div class="slot confirmado">
+                    <strong>Maria Souza</strong>
+                    <p>Dr. Carlos Lima</p>
+                    <div class="edit-container">
+                        <input type="checkbox" id="edit1" class="edit-checkbox">
+                        <label for="edit1" class="edit-btn"><i class="fas fa-edit"></i> Editar</label>
+                        <div class="edit-dropdown">
+                            <button class="confirm"><i class="fas fa-check"></i> Compareceu</button>
+                            <button class="cancel"><i class="fas fa-times"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hour">
+                <span>09:30</span>
+                <div class="slot">
+                    <strong>João Pereira</strong>
+                    <p>Dra. Ana Ribeiro</p>
+                    <div class="edit-container">
+                        <input type="checkbox" id="edit2" class="edit-checkbox">
+                        <label for="edit2" class="edit-btn"><i class="fas fa-edit"></i> Editar</label>
+                        <div class="edit-dropdown">
+                            <button class="confirm"><i class="fas fa-check"></i> Compareceu</button>
+                            <button class="cancel"><i class="fas fa-times"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hour">
+                <span>10:30</span>
+                <div class="slot">
+                    <strong>Lucas Martins</strong>
+                    <p>Dra. Ana Ribeiro</p>
+                    <div class="edit-container">
+                        <input type="checkbox" id="edit3" class="edit-checkbox">
+                        <label for="edit3" class="edit-btn"><i class="fas fa-edit"></i> Editar</label>
+                        <div class="edit-dropdown">
+                            <button class="confirm"><i class="fas fa-check"></i> Compareceu</button>
+                            <button class="cancel"><i class="fas fa-times"></i> Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
