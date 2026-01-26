@@ -10,7 +10,6 @@
     --danger: #ef4444;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +22,6 @@ body {
     color: var(--text);
 }
 
-/* ================= TOPO ================= */
 .topbar {
     height: 70px;
     padding: 0 40px;
@@ -42,7 +40,6 @@ body {
     font-weight: 800;
 }
 
-/* ================= MENU ================= */
 .nav {
     display: flex;
     gap: 30px;
@@ -141,7 +138,6 @@ body {
     padding: 40px;
 }
 
-/* ================= FILTRO ================= */
 .filter {
     margin-bottom: 30px;
 }
@@ -159,7 +155,6 @@ body {
     color: var(--text);
 }
 
-/* ================= PRONTUÁRIOS ================= */
 .prontuarios-list {
     display: flex;
     flex-direction: column;
@@ -198,7 +193,6 @@ body {
     color: var(--muted);
 }
 
-/* ================= EDIT DROPDOWN ================= */
 .edit-container {
     position: relative;
 }
@@ -259,7 +253,6 @@ body {
     pointer-events: auto;
 }
 
-/* BOTÃO ADICIONAR */
 .filter-actions {
     display: flex;
     justify-content: space-between;
@@ -283,7 +276,6 @@ body {
 
 .add-btn:hover { background: #1d4ed8; }
 
-/* ================= MODAL ================= */
 .modal {
     position: fixed;
     inset: 0;
@@ -356,7 +348,6 @@ body {
     cursor: pointer;
 }
 
-/* MENU DAS TRÊS BARRINHAS */
 .menu-container {
     position: relative;
 }

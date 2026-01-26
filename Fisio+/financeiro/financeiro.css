@@ -1,4 +1,3 @@
-/* ================= FINANCEIRO.CSS ================= */
 :root {
     --bg: #0b0d0f;
     --card: #14171a;
@@ -10,7 +9,6 @@
     --danger: #ef4444;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +21,6 @@ body {
     color: var(--text);
 }
 
-/* TOPO */
 .topbar {
     height: 70px;
     padding: 0 40px;
@@ -42,7 +39,6 @@ body {
     font-weight: 800;
 }
 
-/* NAV */
 .nav {
     display: flex;
     gap: 30px;
@@ -137,12 +133,10 @@ body {
     object-fit: cover;
 }
 
-/* CONTAINER */
 .container {
     padding: 40px;
 }
 
-/* FILTRO + BOTAO ADD */
 .filter-actions {
     display: flex;
     justify-content: space-between;
@@ -180,7 +174,6 @@ body {
     background: #1d4ed8;
 }
 
-/* CARDS FINANCEIRO */
 .financeiro-list {
     display: flex;
     flex-direction: column;
@@ -224,7 +217,6 @@ body {
     font-weight: 600;
 }
 
-/* EDIT DROPDOWN */
 .edit-container {
     position: relative;
 }
@@ -282,7 +274,6 @@ body {
     pointer-events: auto;
 }
 
-/* MODAL */
 .modal {
     position: fixed;
     inset: 0;
@@ -362,7 +353,6 @@ body {
     cursor: pointer;
 }
 
-/* MENU DAS TRÊS BARRINHAS */
 .menu-container {
     position: relative;
 }

@@ -7,7 +7,6 @@
     --primary: #2563eb;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +19,6 @@ body {
     color: var(--text);
 }
 
-/* ================= TOPO ================= */
 .topbar {
     height: 70px;
     padding: 0 40px;
@@ -121,7 +119,6 @@ body {
     object-fit: cover;
 }
 
-/* ================= MENU TRÊS BARRINHAS ================= */
 .menu-container {
     position: relative;
 }
@@ -176,7 +173,6 @@ body {
     pointer-events: auto;
 }
 
-/* ================= CONTAINER ================= */
 .container {
     padding: 40px;
     display: flex;
@@ -184,7 +180,6 @@ body {
     align-items: center;
 }
 
-/* ================= FOTO CENTRAL ================= */
 .profile-section {
     display: flex;
     flex-direction: column;
@@ -220,7 +215,6 @@ body {
     color: #1d4ed8;
 }
 
-/* ================= CAMPOS DE INFORMAÇÃO ================= */
 .clinica-info {
     display: flex;
     flex-direction: column;
@@ -253,7 +247,6 @@ body {
     outline: none;
 }
 
-/* Botão Salvar */
 .add-btn {
     align-self: flex-start;
     padding: 10px 18px;
@@ -271,7 +264,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ================= RESPONSIVO ================= */
 @media (max-width: 600px) {
     .profile-pic img {
         width: 140px;

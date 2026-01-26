@@ -23,7 +23,6 @@ body {
     color: var(--text);
 }
 
-/* ================= TOPO ================= */
 .topbar {
     height: 70px;
     padding: 0 40px;
@@ -140,7 +139,6 @@ body {
     padding: 40px;
 }
 
-/* FILTRO + BOTÃO ADICIONAR */
 .filter-actions {
     display: flex;
     justify-content: space-between;
@@ -179,7 +177,6 @@ body {
     background: #1d4ed8;
 }
 
-/* CLIENTE CARDS */
 .clientes-list {
     display: flex;
     flex-direction: column;
@@ -223,7 +220,6 @@ body {
     font-weight: 600;
 }
 
-/* EDIT DROPDOWN */
 .edit-container {
     position: relative;
 }
@@ -281,7 +277,6 @@ body {
     pointer-events: auto;
 }
 
-/* MODAL */
 .modal {
     position: fixed;
     inset: 0;
@@ -367,7 +362,6 @@ body {
     cursor: pointer;
 }
 
-/* MENU DAS TRÊS BARRINHAS */
 .menu-container {
     position: relative;
 }
