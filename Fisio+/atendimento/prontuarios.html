@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <title>Prontuários | Fisio+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="fisiong.png">
+    <link rel="icon" href="../fisiong.png">
     <link rel="stylesheet" href="cssprontuarios.css">
 </head>
+
 <body>
 
-    <!-- TOPO -->
+    <!-- ================= TOPBAR ================= -->
     <header class="topbar">
         <div class="brand">Fisio+</div>
 
         <nav class="nav">
-            <a href="dashboard.html">Menu</a>
+            <a href="../dashboard.html">Menu</a>
 
             <div class="nav-group">
                 <span>Atendimento</span>
                 <div class="dropdown">
-                    <a href="agenda.html">Agenda</a>
+                    <a href="agendamentos.html">Agenda</a>
                     <a href="checkin.html">Check-in</a>
-                    <a href="avaliacoes.html">Avaliações</a>
+                    <a href="avaliaçoes.html">Avaliações</a>
                     <a href="prontuarios.html" class="active">Prontuários</a>
                 </div>
             </div>
@@ -29,33 +31,40 @@
             <div class="nav-group">
                 <span>Cadastros</span>
                 <div class="dropdown">
-                    <a href="clientes.html">Clientes</a>
-                    <a href="profissionais.html">Profissionais</a>
+                    <a href="../cadastro/clientes.html">Clientes</a>
+                    <a href="../cadastro/profissionais.html">Profissionais</a>
                 </div>
             </div>
 
             <div class="nav-group">
                 <span>Financeiro</span>
                 <div class="dropdown">
-                    <a href="mensalidades.html">Mensalidades</a>
-                    <a href="financeiro.html">Financeiro</a>
-                    <a href="relatorios.html">Relatórios</a>
+                    <a href="../financeiro/mensalidades.html">Mensalidades</a>
+                    <a href="../financeiro/financeiro.html">Financeiro</a>
+                    <a href="../financeiro/relatorios.html">Relatórios</a>
                 </div>
             </div>
         </nav>
-
         <div class="top-actions">
-            <span>☰</span>
+            <div class="menu-container">
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-btn">☰</label>
+                <div class="menu-dropdown">
+                    <a href="../configuracoes.html">Configurações</a>
+                    <a href="../index.html">Sair</a>
+                </div>
+            </div>
+
             <div class="avatar">
-                <img src="fisiong.png" alt="Fisio+">
+                <img src="../logofisio.png" alt="Fisio+">
             </div>
         </div>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
+    <!-- ================= CONTAINER ================= -->
     <main class="container">
 
-        <!-- FILTRO + BOTÃO ADICIONAR -->
+        <!-- ==== FILTRO DE PRONTUÁRIOS + BOTÃO ADICIONAR ==== -->
         <section class="filter-actions">
             <div class="filter">
                 <label for="filtro-tipo">Filtrar por tipo:</label>
@@ -67,59 +76,22 @@
                 </select>
             </div>
 
-            <!-- CHECKBOX PARA ABRIR FORMULÁRIO -->
-            <input type="checkbox" id="toggle-form">
-            <label for="toggle-form" class="add-btn"><i class="fas fa-plus"></i> Adicionar Prontuário</label>
-
-            <!-- FORMULÁRIO ADICIONAR -->
-            <section class="add-prontuario">
-                <h2>Adicionar Prontuário</h2>
-                <form>
-                    <label for="paciente">Paciente</label>
-                    <input type="text" id="paciente" placeholder="Nome do paciente">
-
-                    <label for="idade">Idade</label>
-                    <input type="number" id="idade" placeholder="Idade">
-
-                    <label for="genero">Gênero</label>
-                    <select id="genero">
-                        <option value="feminino">Feminino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="outro">Outro</option>
-                    </select>
-
-                    <label for="profissional">Profissional</label>
-                    <input type="text" id="profissional" placeholder="Nome do profissional">
-
-                    <label for="tipo">Tipo de Atendimento</label>
-                    <select id="tipo">
-                        <option value="fisioterapia">Fisioterapia</option>
-                        <option value="consulta">Consulta</option>
-                        <option value="reabilitacao">Reabilitação</option>
-                    </select>
-
-                    <label for="data">Data</label>
-                    <input type="date" id="data">
-
-                    <label for="observacoes">Observações</label>
-                    <textarea id="observacoes" placeholder="Observações"></textarea>
-
-                    <button type="submit" class="primary">Salvar Prontuário</button>
-                </form>
-            </section>
+            <a href="#modal-add" class="primary add-btn"><i class="fas fa-plus"></i>+ Adicionar Prontuário</a>
         </section>
 
-        <!-- LISTA DE PRONTUÁRIOS -->
+        <!-- ==== LISTA DE PRONTUÁRIOS ==== -->
         <section class="prontuarios-list">
+
+            <!-- Exemplo de card -->
             <div class="prontuario-card">
                 <div class="prontuario-info">
                     <strong>Maria Souza</strong>
-                    <p><strong>Idade:</strong> 32</p>
-                    <p><strong>Gênero:</strong> Feminino</p>
-                    <p><strong>Profissional:</strong> Dra. Ana Ribeiro</p>
-                    <p><strong>Tipo:</strong> Fisioterapia</p>
-                    <p><strong>Data:</strong> 25/01/2026</p>
-                    <p><strong>Observações:</strong> Dor leve no ombro direito. Exercícios de mobilidade recomendados.</p>
+                    <p>Idade: 32</p>
+                    <p>Gênero: Feminino</p>
+                    <p>Profissional: Dra. Ana Ribeiro</p>
+                    <p>Tipo: Fisioterapia</p>
+                    <p>Observações: Dor leve no ombro direito. Exercícios de mobilidade recomendados.</p>
+                    <span>Atualização: 25/01/2026</span>
                 </div>
                 <div class="edit-container">
                     <input type="checkbox" id="edit1" class="edit-checkbox">
@@ -130,9 +102,74 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Outro card de exemplo -->
+            <div class="prontuario-card">
+                <div class="prontuario-info">
+                    <strong>João Pereira</strong>
+                    <p>Idade: 45</p>
+                    <p>Gênero: Masculino</p>
+                    <p>Profissional: Dr. Carlos Lima</p>
+                    <p>Tipo: Consulta</p>
+                    <p>Observações: Acompanhamento de evolução clínica.</p>
+                    <span>Atualização: 24/01/2026</span>
+                </div>
+                <div class="edit-container">
+                    <input type="checkbox" id="edit2" class="edit-checkbox">
+                    <label for="edit2" class="edit-btn"><i class="fas fa-edit"></i> Ações</label>
+                    <div class="edit-dropdown">
+                        <button class="edit"><i class="fas fa-pen"></i> Editar</button>
+                        <button class="cancel"><i class="fas fa-times"></i> Cancelar</button>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
     </main>
 
+    <!-- ================= MODAL ADICIONAR PRONTUÁRIO ================= -->
+    <div id="modal-add" class="modal">
+        <div class="modal-box">
+            <h2>Adicionar Prontuário</h2>
+            <form>
+                <label for="paciente">Paciente</label>
+                <input type="text" id="paciente" placeholder="Nome do paciente">
+
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" placeholder="Idade">
+
+                <label for="genero">Gênero</label>
+                <select id="genero">
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+                <label for="profissional">Profissional</label>
+                <input type="text" id="profissional" placeholder="Nome do profissional">
+
+                <label for="tipo">Tipo de Atendimento</label>
+                <select id="tipo">
+                    <option value="fisioterapia">Fisioterapia</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="reabilitacao">Reabilitação</option>
+                </select>
+
+                <label for="data">Data</label>
+                <input type="date" id="data">
+
+                <label for="observacoes">Observações</label>
+                <textarea id="observacoes" placeholder="Observações"></textarea>
+
+                <div class="modal-actions">
+                    <a href="#" class="ghost">Cancelar</a>
+                    <button type="submit" class="primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
 </body>
+
 </html>

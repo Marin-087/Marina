@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Clientes | Fisio+</title>
+    <title>Profissionais | Fisio+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../fisiong.png">
-    <link rel="stylesheet" href="clientes.css">
+    <link rel="stylesheet" href="profissionais.css">
 </head>
 
 <body>
@@ -31,8 +31,8 @@
             <div class="nav-group">
                 <span>Cadastros</span>
                 <div class="dropdown">
-                    <a href="clientes.html" class="active">Clientes</a>
-                    <a href="profissionais.html">Profissionais</a>
+                    <a href="clientes.html">Clientes</a>
+                    <a href="profissionais.html" class="active">Profissionais</a>
                 </div>
             </div>
 
@@ -65,29 +65,32 @@
     <!-- ================= CONTAINER ================= -->
     <main class="container">
 
-        <!-- FILTRO + ADICIONAR CLIENTE -->
+        <!-- FILTRO + ADICIONAR PROFISSIONAL -->
         <section class="filter-actions">
             <div class="filter">
-                <label for="filtro-status">Filtrar por status:</label>
-                <select id="filtro-status">
+                <label for="filtro-especialidade">Filtrar por especialidade:</label>
+                <select id="filtro-especialidade">
                     <option value="todos">Todos</option>
-                    <option value="ativo">Ativo</option>
-                    <option value="inativo">Inativo</option>
+                    <option value="ortopedia">Ortopedia</option>
+                    <option value="esportiva">Esportiva</option>
+                    <option value="fisioterapia">Fisioterapia</option>
+                    <option value="outros">Outros</option>
                 </select>
             </div>
 
-            <a href="#modal-add" class="add-btn"><i class="fas fa-plus"></i> Adicionar Cliente</a>
+            <a href="#modal-add" class="add-btn"><i class="fas fa-plus"></i> Adicionar Profissional</a>
         </section>
 
-        <!-- LISTA DE CLIENTES -->
-        <section class="clientes-list">
+        <!-- LISTA DE PROFISSIONAIS -->
+        <section class="profissionais-list">
 
-            <div class="cliente-card">
-                <div class="cliente-info">
-                    <strong>Cristiano Ronaldo dos Santos Aveiro</strong>
+            <div class="profissional-card">
+                <div class="profissional-info">
+                    <strong>Dra. Ana Ribeiro</strong>
+                    <p>Especialidade: Ortopedia</p>
                     <p>Telefone: (11) 98877-2233</p>
-                    <p>CPF: 123.456.789-01</p>
-                    <p>Status: <span class="status ativo">Ativo</span></p>
+                    <p>CPF: 123.456.789-00</p>
+                    <p>CRM: 123456</p>
                 </div>
 
                 <div class="edit-container">
@@ -99,12 +102,13 @@
                 </div>
             </div>
 
-            <div class="cliente-card">
-                <div class="cliente-info">
-                    <strong>Esmeraldino Suárez</strong>
+            <div class="profissional-card">
+                <div class="profissional-info">
+                    <strong>Dr. Carlos Lima</strong>
+                    <p>Especialidade: Esportiva</p>
                     <p>Telefone: (11) 97755-8899</p>
                     <p>CPF: 987.654.321-00</p>
-                    <p>Status: <span class="status inativo">Inativo</span></p>
+                    <p>CRM: 654321</p>
                 </div>
 
                 <div class="edit-container">
@@ -120,10 +124,10 @@
 
     </main>
 
-    <!-- ================= MODAL ADICIONAR CLIENTE ================= -->
+    <!-- ================= MODAL ADICIONAR PROFISSIONAL ================= -->
     <div id="modal-add" class="modal">
         <div class="modal-box">
-            <h2>Adicionar Cliente</h2>
+            <h2>Adicionar Profissional</h2>
             <form>
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" placeholder="Nome completo">
@@ -132,9 +136,13 @@
                 <input type="text" id="telefone" placeholder="(12) 34567-8901">
 
                 <label for="cpf">CPF</label>
-                <input type="text" id="cpf" placeholder="123.456.789-01">
+                <input type="text" id="cpf" placeholder="123.456.789-00">
 
-                <!-- Status removido, cliente sempre ativo -->
+                <label for="crm">CRM</label>
+                <input type="text" id="crm" placeholder="123456">
+
+                <label for="especialidade">Especialidade</label>
+                <input type="text" id="especialidade" placeholder="Ex: Ortopedia">
 
                 <div class="modal-actions">
                     <a href="#" class="ghost">Cancelar</a>
@@ -144,25 +152,25 @@
         </div>
     </div>
 
-    <!-- ================= MODAL EDITAR CLIENTE ================= -->
+    <!-- ================= MODAL EDITAR PROFISSIONAL ================= -->
     <div id="modal-edit1" class="modal">
         <div class="modal-box">
-            <h2>Editar Cliente</h2>
+            <h2>Editar Profissional</h2>
             <form>
                 <label for="nome-edit">Nome</label>
-                <input type="text" id="nome-edit" value="Cristiano Ronaldo dos Santos Aveiro">
+                <input type="text" id="nome-edit" value="Dra. Ana Ribeiro">
 
                 <label for="telefone-edit">Telefone</label>
                 <input type="text" id="telefone-edit" value="(11) 98877-2233">
 
                 <label for="cpf-edit">CPF</label>
-                <input type="text" id="cpf-edit" value="123.456.789-01">
+                <input type="text" id="cpf-edit" value="123.456.789-00">
 
-                <label for="status-edit">Status</label>
-                <select id="status-edit">
-                    <option value="ativo" selected>Ativo</option>
-                    <option value="inativo">Inativo</option>
-                </select>
+                <label for="crm-edit">CRM</label>
+                <input type="text" id="crm-edit" value="123456">
+
+                <label for="especialidade-edit">Especialidade</label>
+                <input type="text" id="especialidade-edit" value="Ortopedia">
 
                 <div class="modal-actions">
                     <a href="#" class="ghost">Cancelar</a>
@@ -174,10 +182,10 @@
 
     <div id="modal-edit2" class="modal">
         <div class="modal-box">
-            <h2>Editar Cliente</h2>
+            <h2>Editar Profissional</h2>
             <form>
                 <label for="nome-edit2">Nome</label>
-                <input type="text" id="nome-edit2" value="Esmeraldino Suárez">
+                <input type="text" id="nome-edit2" value="Dr. Carlos Lima">
 
                 <label for="telefone-edit2">Telefone</label>
                 <input type="text" id="telefone-edit2" value="(11) 97755-8899">
@@ -185,11 +193,11 @@
                 <label for="cpf-edit2">CPF</label>
                 <input type="text" id="cpf-edit2" value="987.654.321-00">
 
-                <label for="status-edit2">Status</label>
-                <select id="status-edit2">
-                    <option value="ativo">Ativo</option>
-                    <option value="inativo" selected>Inativo</option>
-                </select>
+                <label for="crm-edit2">CRM</label>
+                <input type="text" id="crm-edit2" value="654321">
+
+                <label for="especialidade-edit2">Especialidade</label>
+                <input type="text" id="especialidade-edit2" value="Esportiva">
 
                 <div class="modal-actions">
                     <a href="#" class="ghost">Cancelar</a>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mensalidade | Fisio+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="relatorios.css">
+    <link rel="icon" href="../fisiong.png">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">Fisio+</div>
+
+        <nav class="nav">
+            <a href="../dashboard.html">Menu</a>
+
+            <div class="nav-group">
+                <span>Atendimento</span>
+                <div class="dropdown">
+                    <a href="../atendimento/agendamentos.html">Agenda</a>
+                    <a href="../atendimento/checkin.html">Check-in</a>
+                    <a href="../atendimento/avaliaçoes.html">Avaliações</a>
+                    <a href="../atendimento/prontuarios.html">Prontuários</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Cadastros</span>
+                <div class="dropdown">
+                    <a href="../cadastro/clientes.html">Clientes</a>
+                    <a href="../cadastro/profissionais.html">Profissionais</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Financeiro</span>
+                <div class="dropdown">
+                    <a href="mensalidades.html" class="active">Mensalidades</a>
+                    <a href="financeiro.html">Financeiro</a>
+                    <a href="relatorios.html">Relatórios</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="top-actions">
+            <div class="menu-container">
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-btn">☰</label>
+                <div class="menu-dropdown">
+                    <a href="../configuracoes.html">Configurações</a>
+                    <a href="../index.html">Sair</a>
+                </div>
+            </div>
+
+            <div class="avatar">
+                <img src="../logofisio.png" alt="Fisio+">
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="filter-actions">
+            <div class="filter">
+                <label for="filtro-periodo">Período:</label>
+                <input type="date" id="inicio-periodo">
+                <span>até</span>
+                <input type="date" id="fim-periodo">
+            </div>
+
+            <a href="#modal-gerar" class="add-btn"><i class="fas fa-chart-line"></i> Gerar Relatório</a>
+        </section>
+
+        <section class="relatorios-list">
+
+            <div class="relatorio-card">
+                <div class="relatorio-info">
+                    <strong>Maria Souza</strong>
+                    <p>Total Pago: R$ 450,00</p>
+                    <p>Total Pendente: R$ 150,00</p>
+                    <p>Saldo: R$ 300,00</p>
+                </div>
+
+                <div class="edit-container">
+                    <input type="checkbox" id="edit1" class="edit-checkbox">
+                    <label for="edit1" class="edit-btn"><i class="fas fa-edit"></i> Ações</label>
+                    <div class="edit-dropdown">
+                        <a href="#modal-edit1"><i class="fas fa-pen"></i> Editar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relatorio-card">
+                <div class="relatorio-info">
+                    <strong>Lucas Ferreira</strong>
+                    <p>Total Pago: R$ 600,00</p>
+                    <p>Total Pendente: R$ 200,00</p>
+                    <p>Saldo: R$ 400,00</p>
+                </div>
+
+                <div class="edit-container">
+                    <input type="checkbox" id="edit2" class="edit-checkbox">
+                    <label for="edit2" class="edit-btn"><i class="fas fa-edit"></i> Ações</label>
+                    <div class="edit-dropdown">
+                        <a href="#modal-edit2"><i class="fas fa-pen"></i> Editar</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="modal-gerar" class="modal">
+        <div class="modal-box">
+            <h2>Gerar Relatório</h2>
+            <form>
+                <label for="relatorio-inicio">Início</label>
+                <input type="date" id="relatorio-inicio">
+
+                <label for="relatorio-fim">Fim</label>
+                <input type="date" id="relatorio-fim">
+
+                <div class="modal-actions">
+                    <a href="#" class="ghost">Cancelar</a>
+                    <button type="submit" class="primary">Gerar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-edit1" class="modal">
+        <div class="modal-box">
+            <h2>Editar Relatório</h2>
+            <form>
+                <label for="cliente-edit1">Cliente</label>
+                <input type="text" id="cliente-edit1" value="Maria Souza">
+
+                <label for="total-pago1">Total Pago</label>
+                <input type="text" id="total-pago1" value="450,00">
+
+                <label for="total-pendente1">Total Pendente</label>
+                <input type="text" id="total-pendente1" value="150,00">
+
+                <label for="saldo1">Saldo</label>
+                <input type="text" id="saldo1" value="300,00">
+
+                <div class="modal-actions">
+                    <a href="#" class="ghost">Cancelar</a>
+                    <button type="submit" class="primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-edit2" class="modal">
+        <div class="modal-box">
+            <h2>Editar Relatório</h2>
+            <form>
+                <label for="cliente-edit2">Cliente</label>
+                <input type="text" id="cliente-edit2" value="Lucas Ferreira">
+
+                <label for="total-pago2">Total Pago</label>
+                <input type="text" id="total-pago2" value="600,00">
+
+                <label for="total-pendente2">Total Pendente</label>
+                <input type="text" id="total-pendente2" value="200,00">
+
+                <label for="saldo2">Saldo</label>
+                <input type="text" id="saldo2" value="400,00">
+
+                <div class="modal-actions">
+                    <a href="#" class="ghost">Cancelar</a>
+                    <button type="submit" class="primary">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

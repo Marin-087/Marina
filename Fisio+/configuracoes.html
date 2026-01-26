@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Configurações | Fisio+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logofisio.png">
+    <link rel="stylesheet" href="configuracoes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= TOPO ================= -->
+    <header class="topbar">
+        <div class="brand">Fisio+</div>
+
+        <nav class="nav">
+            <a href="dashboard.html">Menu</a>
+
+            <div class="nav-group">
+                <span>Atendimento</span>
+                <div class="dropdown">
+                    <a href="atendimento/agendamentos.html">Agenda</a>
+                    <a href="atendimento/checkin.html">Check-in</a>
+                    <a href="atendimento/avaliaçoes.html">Avaliações</a>
+                    <a href="atendimento/prontuarios.html">Prontuários</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Cadastros</span>
+                <div class="dropdown">
+                    <a href="cadastro/clientes.html">Clientes</a>
+                    <a href="cadastro/profissionais.html">Profissionais</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Financeiro</span>
+                <div class="dropdown">
+                    <a href="financeiro/mensalidades.html">Mensalidades</a>
+                    <a href="financeiro/financeiro.html">Financeiro</a>
+                    <a href="financeiro/relatorios.html">Relatórios</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="top-actions">
+            <div class="menu-container">
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-btn">☰</label>
+                <div class="menu-dropdown">
+                    <a href="configuracoes.html">Configurações</a>
+                    <a href="../login.html">Sair</a>
+                </div>
+            </div>
+
+            <div class="avatar">
+                <img src="logofisio.png" alt="Fisio+">
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= CONTAINER ================= -->
+    <main class="container">
+
+        <h1>Configurações da Clínica</h1><br>
+
+        <!-- FOTO DA CLÍNICA NO CENTRO -->
+        <section class="profile-section">
+            <div class="profile-pic">
+                <img id="foto-clinica" src="logofisio.png" alt="Logo da Clínica">
+            </div>
+            <label for="upload-foto" class="upload-btn"><i class="fas fa-camera"></i> Alterar Foto</label>
+            <input type="file" id="upload-foto" style="display:none">
+        </section>
+
+        <!-- INFORMAÇÕES DA CLÍNICA -->
+        <section class="clinica-info">
+            <div class="field">
+                <label for="nome">Nome da Clínica</label>
+                <input type="text" id="nome" value="Fisio+">
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="contato@fisio.com.br">
+            </div>
+
+            <div class="field">
+                <label for="telefone">Telefone</label>
+                <input type="text" id="telefone" value="(11) 1234-5678">
+            </div>
+
+            <div class="field">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" value="Rua Exemplo, 123, São Paulo - SP">
+            </div>
+
+            <div class="field">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade" value="São Paulo">
+            </div>
+
+            <div class="field">
+                <label for="cep">CEP</label>
+                <input type="text" id="cep" value="01000-000">
+            </div>
+
+            <div class="field">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado" value="SP">
+            </div>
+
+            <button class="add-btn"><i class="fas fa-save"></i> Salvar Alterações</button>
+        </section>
+
+    </main>
+
+    <script>
+        // Pré-visualização da imagem antes de salvar
+        const uploadInput = document.getElementById('upload-foto');
+        const fotoClinica = document.getElementById('foto-clinica');
+
+        uploadInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    fotoClinica.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+
+</body>
+
+</html>

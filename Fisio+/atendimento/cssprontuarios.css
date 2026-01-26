@@ -141,13 +141,8 @@ body {
     padding: 40px;
 }
 
-/* ================= FILTRO + BOTÃO ADICIONAR ================= */
-.filter-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+/* ================= FILTRO ================= */
+.filter {
     margin-bottom: 30px;
 }
 
@@ -164,113 +159,46 @@ body {
     color: var(--text);
 }
 
-.add-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 10px 18px;
-    border-radius: 14px;
-    background: var(--primary);
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.add-btn:hover { 
-    background: #1d4ed8; 
-}
-
-/* ================= FORMULÁRIO ADICIONAR ================= */
-.add-prontuario {
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-    background: var(--card);
-    border-radius: 16px;
-    border: 1px solid var(--stroke);
-    padding: 20px;
-    margin-bottom: 30px;
-}
-
-#toggle-form:checked + .add-prontuario {
-    display: flex;
-}
-
-.add-prontuario h2 {
-    margin-bottom: 12px;
-}
-
-.add-prontuario label {
-    font-size: 0.85rem;
-    color: var(--muted);
-}
-
-.add-prontuario input,
-.add-prontuario select,
-.add-prontuario textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 12px;
-    border: 1px solid var(--stroke);
-    background: #0f172a;
-    color: var(--text);
-}
-
-.add-prontuario textarea {
-    resize: vertical;
-    height: 80px;
-}
-
-.add-prontuario button.primary {
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 12px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.add-prontuario button.primary:hover {
-    background: #1d4ed8;
-}
-
-/* ================= CARDS DE PRONTUÁRIO ================= */
+/* ================= PRONTUÁRIOS ================= */
 .prontuarios-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 18px;
 }
 
 .prontuario-card {
+    background: var(--card);
+    border-left: 4px solid var(--primary);
+    border-radius: 16px;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
-    padding: 18px;
-    border-radius: 14px;
-    border: 1px solid var(--stroke);
-    background: var(--card);
-    transition: transform 0.2s, box-shadow 0.2s;
+    align-items: flex-start;
+    gap: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .prontuario-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .prontuario-info strong {
     display: block;
-    font-size: 1rem;
     margin-bottom: 4px;
 }
 
 .prontuario-info p {
     font-size: 0.85rem;
     color: var(--muted);
-    margin-bottom: 2px;
 }
 
-/* ================= DROPDOWN DE AÇÕES DO CARD ================= */
+.prontuario-info span {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+/* ================= EDIT DROPDOWN ================= */
 .edit-container {
     position: relative;
 }
@@ -280,12 +208,13 @@ body {
 }
 
 .edit-btn {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--primary);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 4px;
+    transition: color 0.2s;
 }
 
 .edit-btn:hover {
@@ -297,8 +226,9 @@ body {
     top: 110%;
     right: 0;
     background: var(--card);
-    border-radius: 12px;
     border: 1px solid var(--stroke);
+    border-radius: 12px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     opacity: 0;
@@ -309,13 +239,13 @@ body {
 }
 
 .edit-dropdown button {
-    background: none;
+    padding: 8px 12px;
     border: none;
-    padding: 8px 14px;
-    text-align: left;
+    background: none;
     color: var(--text);
     font-weight: 500;
     cursor: pointer;
+    text-align: left;
     transition: background 0.2s;
 }
 
@@ -323,8 +253,105 @@ body {
     background: #1f2329;
 }
 
-.edit-checkbox:checked + .edit-btn + .edit-dropdown {
+.edit-checkbox:checked+.edit-btn+.edit-dropdown {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+/* BOTÃO ADICIONAR */
+.filter-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 14px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.add-btn:hover { background: #1d4ed8; }
+
+/* ================= MODAL ================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal:target {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background: var(--card);
+    padding: 32px;
+    border-radius: 22px;
+    width: 420px;
+    border: 1px solid var(--stroke);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal:target .modal-box { transform: translateY(0); }
+
+.modal-box h2 { margin-bottom: 20px; font-size: 1.3rem; }
+
+.modal-box label { font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; display: block; }
+
+.modal-box input, .modal-box select, .modal-box textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--stroke);
+    background: #0f172a;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.modal-box textarea { resize: vertical; height: 80px; }
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.modal-actions .ghost {
+    background: transparent;
+    border: 1px solid var(--stroke);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 14px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.modal-actions .primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 14px;
+    cursor: pointer;
 }

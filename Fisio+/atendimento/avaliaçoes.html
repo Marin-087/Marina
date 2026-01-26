@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <title>Avaliações | Fisio+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="fisiong.png">
+    <link rel="icon" href="../fisiong.png">
     <link rel="stylesheet" href="cssavaliacoes.css">
 </head>
 
 <body>
 
-    <!-- ================= TOPBAR ================= -->
     <header class="topbar">
         <div class="brand">Fisio+</div>
 
         <nav class="nav">
-            <a href="dashboard.html">Menu</a>
+            <a href="../dashboard.html">Menu</a>
 
             <div class="nav-group">
                 <span>Atendimento</span>
@@ -39,25 +38,31 @@
             <div class="nav-group">
                 <span>Financeiro</span>
                 <div class="dropdown">
-                    <a href="mensalidades.html">Mensalidades</a>
-                    <a href="financeiro.html">Financeiro</a>
-                    <a href="relatorios.html">Relatórios</a>
+                    <a href="../financeiro/mensalidades.html">Mensalidades</a>
+                    <a href="../financeiro/financeiro.html">Financeiro</a>
+                    <a href="../financeiro/relatorios.html">Relatórios</a>
                 </div>
             </div>
         </nav>
 
         <div class="top-actions">
-            <span>☰</span>
+            <div class="menu-container">
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-btn">☰</label>
+                <div class="menu-dropdown">
+                    <a href="../configuracoes.html">Configurações</a>
+                    <a href="../index.html">Sair</a>
+                </div>
+            </div>
+
             <div class="avatar">
                 <img src="../logofisio.png" alt="Fisio+">
             </div>
         </div>
     </header>
 
-    <!-- ================= CONTAINER ================= -->
     <main class="container">
 
-        <!-- ==== FILTRO DE AVALIAÇÕES + BOTÃO ADICIONAR ==== -->
         <section class="filter-actions">
             <div class="filter">
                 <label for="filtro-tipo">Filtrar por tipo:</label>
@@ -72,10 +77,8 @@
             <a href="#modal-add" class="primary add-btn"><i class="fas fa-plus"></i>+ Adicionar Avaliação</a>
         </section>
 
-        <!-- ==== LISTA DE AVALIAÇÕES ==== -->
         <section class="avaliacoes-list">
 
-            <!-- Exemplo de card -->
             <div class="avaliacao-card">
                 <div class="avaliacao-info">
                     <strong>Maria Souza</strong>
@@ -96,13 +99,11 @@
                 </div>
             </div>
 
-            <!-- Outros cards podem ser adicionados aqui -->
 
         </section>
 
     </main>
 
-    <!-- ================= MODAL ADICIONAR AVALIAÇÃO ================= -->
     <div id="modal-add" class="modal">
         <div class="modal-box">
             <h2>Adicionar Avaliação</h2>

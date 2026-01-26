@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Relatórios | Fisio+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../fisiong.png">
+    <link rel="stylesheet" href="relatorios.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">Fisio+</div>
+
+        <nav class="nav">
+            <a href="../dashboard.html">Menu</a>
+
+            <div class="nav-group">
+                <span>Atendimento</span>
+                <div class="dropdown">
+                    <a href="../atendimento/agendamentos.html">Agenda</a>
+                    <a href="../atendimento/checkin.html">Check-in</a>
+                    <a href="../atendimento/avaliaçoes.html">Avaliações</a>
+                    <a href="../atendimento/prontuarios.html">Prontuários</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Cadastros</span>
+                <div class="dropdown">
+                    <a href="../cadastro/clientes.html">Clientes</a>
+                    <a href="../cadastro/profissionais.html">Profissionais</a>
+                </div>
+            </div>
+
+            <div class="nav-group">
+                <span>Financeiro</span>
+                <div class="dropdown">
+                    <a href="mensalidades.html">Mensalidades</a>
+                    <a href="financeiro.html">Financeiro</a>
+                    <a href="relatorios.html" class="active">Relatórios</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="top-actions">
+            <div class="menu-container">
+                <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+                <label for="menu-toggle" class="menu-btn">☰</label>
+                <div class="menu-dropdown">
+                    <a href="../configuracoes.html">Configurações</a>
+                    <a href="../index.html">Sair</a>
+                </div>
+            </div>
+
+            <div class="avatar">
+                <img src="../logofisio.png" alt="Fisio+">
+            </div>
+        </div>
+    </header>
+
+    </header>
+
+    <main class="container">
+
+        <section class="filter-actions">
+            <div class="filter">
+                <label for="data-inicio">Início:</label>
+                <input type="date" id="data-inicio">
+                <label for="data-fim">Fim:</label>
+                <input type="date" id="data-fim">
+            </div>
+
+            <button class="add-btn"><i class="fas fa-chart-line"></i> Gerar Relatório</button>
+        </section>
+
+        <section class="relatorios-list">
+
+            <div class="relatorio-card">
+                <strong>Total de Receitas</strong>
+                <p>R$ 2.500,00</p>
+            </div>
+
+            <div class="relatorio-card">
+                <strong>Total de Despesas</strong>
+                <p>R$ 1.200,00</p>
+            </div>
+
+            <div class="relatorio-card">
+                <strong>Saldo</strong>
+                <p>R$ 1.300,00</p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
