@@ -385,3 +385,140 @@ body {
     transform: translateY(0);
     pointer-events: auto;
 }
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .menu-dropdown {
+        width: 250px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-dropdown a {
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--stroke);
+        display: block;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .filter-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter select {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .add-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+    }
+
+    .profissionais-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .profissional-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .profissional-info strong {
+        font-size: 1.1rem;
+        display: block;
+        margin-bottom: 10px;
+        color: var(--primary);
+    }
+
+    .profissional-info p {
+        padding: 4px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .edit-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .edit-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid var(--stroke);
+        border-radius: 10px;
+    }
+
+    .edit-dropdown {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        display: none;
+        background: rgba(255, 255, 255, 0.03);
+        margin-top: 8px;
+        border: none;
+    }
+
+    .edit-checkbox:checked + .edit-btn + .edit-dropdown {
+        display: flex;
+    }
+
+    .modal-box {
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 20px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-actions .ghost, 
+    .modal-actions .primary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+}

@@ -10,7 +10,6 @@
     --danger: #ef4444;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -418,4 +417,150 @@ body {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none; 
+    }
+
+    .mobile-only {
+        display: block; 
+    }
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .menu-dropdown {
+        width: 240px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-dropdown a {
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--stroke);
+        display: block;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .filter-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .filter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter select {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+        margin-left: 0;
+    }
+
+    .add-btn {
+        width: 100%; 
+        padding: 15px;
+        font-size: 1rem;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        order: -1; 
+    }
+
+    .cliente-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .cliente-info strong {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .edit-container {
+        width: 100%;
+    }
+
+    .edit-btn {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid var(--stroke);
+        border-radius: 10px;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .edit-dropdown {
+        width: 100%;
+        position: static;
+        display: none;
+        opacity: 1;
+        transform: none;
+        margin-top: 10px;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .edit-dropdown a {
+        padding: 15px;
+        text-align: center;
+        border: none;
+    }
+
+    .edit-checkbox:checked + .edit-btn + .edit-dropdown {
+        display: flex;
+    }
+
+    .modal-box {
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    .modal-box input, 
+    .modal-box select {
+        padding: 14px;
+        font-size: 1rem;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .modal-actions .ghost,
+    .modal-actions .primary {
+        width: 100%;
+        text-align: center;
+        padding: 14px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
 }

@@ -410,3 +410,122 @@ body {
     transform: translateY(0);
     pointer-events: auto;
 }
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .menu-dropdown {
+        width: 240px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-dropdown a {
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--stroke);
+        display: block;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .filter-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter select {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .add-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+    }
+
+    .financeiro-card {
+        flex-direction: column;
+        gap: 15px;
+        position: relative;
+    }
+
+    .edit-container {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    .edit-btn {
+        width: 100%;
+        padding: 8px 0;
+        border-top: 1px solid var(--stroke);
+        justify-content: center;
+    }
+
+    .edit-dropdown {
+        width: 100%;
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        display: none;
+        border: none;
+        background: rgba(255,255,255,0.03);
+        margin-top: 5px;
+    }
+
+    .edit-checkbox:checked + .edit-btn + .edit-dropdown {
+        display: flex;
+    }
+
+    .modal-box {
+        width: 90%;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-actions .ghost, 
+    .modal-actions .primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+
+    .financeiro-info strong {
+        font-size: 0.95rem;
+    }
+}

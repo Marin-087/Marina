@@ -414,3 +414,140 @@ body {
     pointer-events: auto;
 }
 
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .topbar {
+        padding: 0 20px;
+    }
+
+    .menu-dropdown {
+        width: 250px;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .menu-dropdown a {
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--stroke);
+        display: block;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .filter-actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .filter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .filter input[type="date"] {
+        width: 100%;
+        padding: 12px;
+        background: var(--card);
+        border: 1px solid var(--stroke);
+        color: white;
+        border-radius: 12px;
+    }
+
+    .add-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .relatorios-list {
+        gap: 15px;
+    }
+
+    .relatorio-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .relatorio-info strong {
+        font-size: 1.1rem;
+        border-bottom: 1px solid var(--stroke);
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+    }
+
+    .edit-container {
+        width: 100%;
+    }
+
+    .edit-btn {
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+        border: 1px solid var(--stroke);
+        border-radius: 10px;
+    }
+
+    .edit-dropdown {
+        position: static;
+        width: 100%;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+        display: none;
+        background: rgba(255, 255, 255, 0.03);
+        margin-top: 8px;
+        border: none;
+    }
+
+    .edit-checkbox:checked + .edit-btn + .edit-dropdown {
+        display: flex;
+    }
+
+    .modal-box {
+        width: 95%;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-actions .ghost, 
+    .modal-actions .primary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+    
+    .relatorio-info p {
+        font-size: 0.9rem;
+        display: flex;
+        justify-content: space-between;
+    }
+}

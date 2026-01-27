@@ -7,7 +7,6 @@
     --primary: #2563eb;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +19,6 @@ body {
     color: var(--text);
 }
 
-/* ================= TOPO ================= */
 
 .topbar {
     height: 70px;
@@ -31,14 +29,12 @@ body {
     border-bottom: 1px solid var(--stroke);
 }
 
-/* LOGO */
 .brand {
     font-size: 1.5rem;
     font-weight: 800;
     white-space: nowrap;
 }
 
-/* ================= MENU ================= */
 
 .nav {
     display: flex;
@@ -57,7 +53,6 @@ body {
     color: var(--text);
 }
 
-/* GRUPOS COM DROPDOWN */
 .nav-group {
     position: relative;
     font-weight: 500;
@@ -73,7 +68,6 @@ body {
     color: var(--text);
 }
 
-/* DROPDOWN */
 .dropdown {
     position: absolute;
     top: 130%;
@@ -106,7 +100,6 @@ body {
     color: white;
 }
 
-/* ================= AÇÕES TOPO ================= */
 
 .top-actions {
     display: flex;
@@ -114,7 +107,6 @@ body {
     gap: 15px;
 }
 
-/* AVATAR */
 .avatar {
     width: 36px;
     height: 36px;
@@ -133,13 +125,11 @@ body {
     object-fit: cover;
 }
 
-/* ================= CONTAINER ================= */
 
 .container {
     padding: 40px;
 }
 
-/* ================= BOTÕES ================= */
 
 .primary,
 button {
@@ -154,13 +144,11 @@ button {
 
 }
 
-/* ================= CONTAINER ================= */
 
 .container {
     padding: 40px;
 }
 
-/* ================= BLOCO HOJE ================= */
 
 .today {
     background: linear-gradient(135deg, #1e293b, #0f172a);
@@ -199,7 +187,6 @@ button {
     gap: 15px;
 }
 
-/* ================= BOTÕES ================= */
 
 button {
     border: none;
@@ -220,7 +207,6 @@ button {
     color: white;
 }
 
-/* ================= GRID ================= */
 
 .grid {
     display: grid;
@@ -238,7 +224,6 @@ button {
     margin-bottom: 20px;
 }
 
-/* ================= LISTAS ================= */
 
 .timeline li,
 .checkin li {
@@ -253,7 +238,6 @@ button {
     margin-right: 10px;
 }
 
-/* ================= FINANCEIRO ================= */
 
 .money {
     display: flex;
@@ -283,7 +267,6 @@ button {
     font-weight: 600;
 }
 
-/* ================= LINKS INTERNOS ================= */
 
 .link {
     display: inline-block;
@@ -294,7 +277,6 @@ button {
     text-decoration: none;
 }
 
-/* MENU DAS TRÊS BARRINHAS */
 .menu-container {
     position: relative;
 }
@@ -347,9 +329,105 @@ button {
     color: var(--text);
 }
 
-.menu-checkbox:checked + .menu-btn + .menu-dropdown {
+.menu-checkbox:checked+.menu-btn+.menu-dropdown {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
 }
 
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .nav {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .menu-dropdown {
+        width: 240px;
+        right: 0;
+        max-height: 80vh;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column; 
+        padding: 10px;
+    }
+
+    .menu-dropdown a {
+        padding: 12px 15px;
+        border-bottom: 1px solid var(--stroke);
+        display: block;
+        width: 100%;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .today {
+        padding: 20px;
+    }
+
+    .today-stats {
+        display: flex;
+        flex-direction: column; 
+        gap: 12px;
+        margin: 20px 0;
+    }
+
+    .today-stats div {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 12px 15px;
+        border-radius: 12px;
+    }
+
+    .today-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .primary, button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+
+    .today h1 {
+        font-size: 1.6rem;
+    }
+
+    .today-stats div strong {
+        font-size: 1.3rem;
+    }
+}

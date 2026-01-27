@@ -52,8 +52,22 @@
                 <input type="checkbox" id="menu-toggle" class="menu-checkbox">
                 <label for="menu-toggle" class="menu-btn">☰</label>
                 <div class="menu-dropdown">
+                    <div class="mobile-only">
+                        <a href="dashboard.html"><strong>Menu Principal</strong></a>
+                        <a href="atendimento/agendamentos.html">Agenda</a>
+                        <a href="atendimento/avaliaçoes.html">Avaliações</a>
+                        <a href="atendimento/checkin.html">Check-in</a>
+                        <a href="atendimento/prontuarios.html">Prontuários</a>
+                        <a href="cadastro/clientes.html">Clientes</a>
+                        <a href="cadastro/profissionais.html">Profissionais</a>
+                        <a href="financeiro/financeiro.html">Financeiro</a>
+                        <a href="financeiro/mensalidades.html">Mensalidades</a>
+                        <a href="financeiro/relatorios.html">Relatórios</a>
+                        <hr style="border: 0; border-top: 1px solid var(--stroke); margin: 5px 0;">
+                    </div>
+
                     <a href="configuracoes.html">Configurações</a>
-                    <a href="index.html">Sair</a>
+                    <a href="index.html" style="color: #ef4444;">Sair</a>
                 </div>
             </div>
 
@@ -107,7 +121,7 @@
                     <li><span>11:30</span> Mariana — Reavaliação</li>
                 </ul>
 
-                <a class="link">Ver agenda completa →</a>
+                <a href="atendimento/agendamentos.html" class="link">Ver agenda completa →</a>
             </div>
 
             <div class="card">
@@ -119,7 +133,7 @@
                     <li class="late">Mariana — Não compareceu</li>
                 </ul>
 
-                <a class="link">Gerenciar check-in →</a>
+                <a href="atendimento/checkin.html" class="link">Gerenciar check-in →</a>
             </div>
 
             <div class="card">
@@ -140,7 +154,7 @@
                     </div>
                 </div>
 
-                <a class="link">Ver financeiro →</a>
+                <a href="financeiro/financeiro.html" class="link">Ver financeiro →</a>
             </div>
 
         </section>
