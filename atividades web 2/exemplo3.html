@@ -9,7 +9,7 @@
 
 <body>
 
-    <h1>Exercício Prático</h1>
+    <h1>Exercício Prático + Desafio</h1>
 
     <script>
 
@@ -34,13 +34,6 @@
 
 
         document.write("<h2>03. Compare os valores</h2>");
-        document.write("numero1 > numero2: " + (numero1 > numero2) + "<br>");
-        document.write("numero1 < numero2: " + (numero1 < numero2) + "<br>");
-        document.write("numero1 == numero2: " + (numero1 == numero2) + "<br>");
-        document.write("numero1 != numero2: " + (numero1 != numero2) + "<br><br>");
-
-
-        document.write("<h2>04. Use incremento e decremento</h2>");
         document.write("(numero1 > 0 && numero2 > 0): " + (numero1 > 0 && numero2 > 0) + "<br>");
         document.write("(numero1 < 0 || numero2 > 0): " + (numero1 < 0 || numero2 > 0) + "<br>");
         document.write("!(numero1 < numero2): " + (!(numero1 < numero2)) + "<br><br>");
@@ -49,9 +42,27 @@
         numero1++;
         numero2--;
 
-        document.write("<h2>Incremento e Decremento</h2>");
+        document.write("<h2>04. Use incremento e decremento</h2>");
         document.write("numero1 após incremento: " + numero1 + "<br>");
-        document.write("numero2 após decremento: " + numero2 + "<br>");
+        document.write("numero2 após decremento: " + numero2 + "<br><br>");
+
+
+        let nota = 8;
+        let frequencia = 80;
+
+        document.write("<h2>Desafio Extra</h2>");
+        document.write("Nota: " + nota + "<br>");
+        document.write("Frequência: " + frequencia + "%<br>");
+
+        if (nota >= 7 && frequencia >= 75) {
+
+            document.write("<strong>O aluno foi aprovado</strong>");
+
+        } else {
+
+            document.write("<strong>O aluno foi reprovado</strong>");
+
+        }
 
     </script>
 
