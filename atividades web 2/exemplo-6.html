@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 6</title>
+</head>
+<body>
+
+    <h1>Atividade 6</h1>
+
+    <script>
+        function apresentar() {
+            document.write("<h2>1. Bem-vindo à Programação Web!</h2>");
+        }
+
+        apresentar();
+
+        function saudar(nome) {
+            document.write("<h2>2. Olá, " + nome + "!</h2>");
+        }
+
+        saudar("João");
+
+        function calcularArea(base, altura) {
+            return base * altura;
+        }
+
+        let area = calcularArea(10, 5);
+        document.write("<h2>3. Área do retângulo: " + area + "</h2>");
+
+        const dobro = (numero) => {
+            return numero * 2;
+        };
+
+        document.write("<h2>4. Dobro de 7: " + dobro(7) + "</h2>");
+
+    </script>
+
+</body>
+</html>
